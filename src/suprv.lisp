@@ -239,7 +239,7 @@
        (SETQ GCSYML NIL)
        (DOTIMES (I 14.) (PUSH (GENSYM) GCSYML))
        (SETQ ALT #-MULTICS ' #+MULTICS '&)
-#-LISPM (SETQ $PLOTUNDEFINED (*$ 2.0 -8.5070591E+37))
+#-(or LISPM Multics) (SETQ $PLOTUNDEFINED (*$ 2.0 -8.5070591E+37))
        (SETQ $LASTTIME '((MLIST) 0 0) THISTIME 0 GCT 0 GCFLAG NIL
 	     $PARSETIME NIL $DISPTIME NIL MEXPRP NIL)
        (SETQ BATCONL NIL $BATCOUNT 0 $BATCHKILL NIL $STRDISP T $GRIND NIL)
@@ -1077,7 +1077,7 @@
 		      (IF (AND Y (NOT (MEMQ Y MOPL)) (MEMQ Y (CDR $PROPS)))
 			  (KILL-OPERATOR X)))
 		 (REMALIAS X NIL) (DELQ X $ARRAYS 1) (REMPROPCHK X)
-		 #+MACLISP (ARGS X NIL)
+		 ;#+MACLISP (ARGS X NIL)
 		 (DELETE (ASSOC (NCONS X) $FUNCTIONS) $FUNCTIONS 1)
 		 (DELETE (ASSOC (NCONS X) $MACROS) $MACROS 1)
 		 (LET ((Y (ASSOC (NCONS X) $GRADEFS)))
@@ -1371,7 +1371,7 @@
 		   TOKEN NIL FLAG NIL)
 	     (GO B)
 	DQUOT(SETQ INPUT (CDR INPUT))
-	     (COND ((NULL INPUT) (MERROR "~%/" must occur in pairs."))
+	     (COND ((NULL INPUT) (MERROR "~%"" must occur in pairs."))
 		   ((= (CAR INPUT) #/\) (SETQ INPUT (CDR INPUT)))
 		   ((= (CAR INPUT) #/")
 		    (SETQ INPUT (CDR INPUT)
@@ -1615,7 +1615,7 @@
   (COND ((NONSYMCHK X '$ALIAS))
 	((NONSYMCHK Y '$ALIAS))
 	((NOT (EQ (GETCHAR X 1) '$))
-	 (MERROR "/"-ed symbols may not be aliased. ~M" X))
+	 (MERROR """-ed symbols may not be aliased. ~M" X))
 	((GET X 'REVERSEALIAS)
 	 (IF (NOT (EQ X Y))
 	     (MERROR "~M already is aliased." X)))
@@ -2058,7 +2058,7 @@
 
 ;;; The Multics Version of Writefile and Closefile.
 ;;; Appendfile is not implemented yet.
-#+MULTICS (PROGN 'COMPILE
+#+MULTICSXXX (PROGN 'COMPILE
 (LOAD-MACSYMA-MACROS SYSTEM_ERROR_HANDLER)
 
 (DEFMVAR WRITEFILE-IN-PROGRESS () "T if there is a writefile happening")

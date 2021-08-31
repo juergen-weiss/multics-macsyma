@@ -34,7 +34,8 @@
 (defmvar $% '$% "last thing printed out, cooresponds to lisp *")
 (defmvar $__ '$__ "thing read in which will be evaluated, cooresponds to -")
 
-(declare (special *mread-prompt*))
+(declare (special *mread-prompt*)
+	 (*lexpr mread))
 
 (defvar accumulated-time 0.0)
 
@@ -46,34 +47,33 @@
     (LET (((C-TAG D-TAG)
 	   (MAKE-LINE-LABELS $INCHAR $OUTCHAR)))
       (SETQ R (LET ((*MREAD-PROMPT* (MAIN-PROMPT)))
-		(AND BATCH-OR-DEMO-FLAG
+		(AND (NOT BATCH-OR-DEMO-FLAG)
 		     (FORMAT STANDARD-OUTPUT "~%~A" *MREAD-PROMPT*))
 		(MREAD STANDARD-INPUT EOF)))
       (IF (EQ R EOF) (RETURN '$DONE))
-      (TERPRI STANDARD-INPUT)
-      (FUNCALL STANDARD-INPUT ':FORCE-OUTPUT)
+      (TERPRI STANDARD-OUTPUT)
+      #-Multics (FUNCALL STANDARD-INPUT ':FORCE-OUTPUT)
       (SETQ $__ (CADDR R))
       (SET  C-TAG $__)
-      (setq time-before (time))
+      (setq time-before (runtime))
       (SETQ $% (TOPLEVEL-MACSYMA-EVAL $__))
-      (setq time-after (time))
-      (setq time-used (quotient (time-difference time-after time-before)
-				60.0))
+      (setq time-after (runtime))
+      (setq time-used (// (- time-after time-before) 1000.))
       (setq accumulated-time (plus accumulated-time time-used))
       (SET  D-TAG $%)
       (SETQ $_ $__)
       (if $showtime
-	  (mtell "Evaluation took ~S seconds." time-used))
+	  (mtell "Evaluation took ~S ms." time-used))
       (IF (EQ (CAAR R) 'DISPLAYINPUT)
 	  (DISPLA `((MLABLE) ,D-TAG ,$%)))
       (COND ((EQ BATCH-OR-DEMO-FLAG ':DEMO)
 	     (MTELL "~&Pausing.  Type any character to continue demo.~%")
-	     (IF (AND (= (FUNCALL STANDARD-OUTPUT ':TYI) #\CLEAR-SCREEN)
+	     #-Multics (IF (AND (= (FUNCALL STANDARD-OUTPUT ':TYI) #\FF)
 		      (MEMQ ':CLEAR-SCREEN (FUNCALL STANDARD-OUTPUT ':WHICH-OPERATIONS)))
 		 (FUNCALL STANDARD-OUTPUT ':CLEAR-SCREEN)
 		 (TERPRI STANDARD-OUTPUT))))
       ;; This is sort of a kludge -- eat newlines and blanks so that they don't echo
-      (AND BATCH-OR-DEMO-FLAG
+      #-Multics (AND BATCH-OR-DEMO-FLAG
 	   (MEMQ ':TYI-NO-ECHO (FUNCALL STANDARD-INPUT ':WHICH-OPERATIONS))
 	   (DO (CHAR) (())
 	     (SETQ CHAR (FUNCALL STANDARD-INPUT ':TYI-NO-ECHO))
@@ -96,16 +96,17 @@
 	 (MBREAK-LOOP)))
 
 (DEFUN MBREAK-LOOP ()
-  (LET ((STANDARD-INPUT TERMINAL-IO-SYNONYM))
+  (LET ((STANDARD-INPUT #-Multics TERMINAL-IO-SYNONYM #+Multics t))
     (*CATCH 'BREAK-EXIT
       (DO ((R)) (NIL)
-	(FUNCALL STANDARD-INPUT ':FRESH-LINE)
+	#-Multics (FUNCALL STANDARD-INPUT ':FRESH-LINE)
 	(SETQ R (CADDR (LET ((*MREAD-PROMPT* (BREAK-PROMPT)))
 			 (MREAD STANDARD-INPUT))))
 	(CASEQ R
 	  (($EXIT) (*THROW 'BREAK-EXIT T))
 	  (T (ERRSET (DISPLA (MEVAL R)) T)))))))
 
+#-Multics
 (DEFUN RETRIEVE (MSG FLAG &AUX (PRINT? NIL))
   (DECLARE (SPECIAL MSG FLAG PRINT?))
   (OR (EQ FLAG 'NOPRINT) (SETQ PRINT? T))
@@ -123,23 +124,25 @@
 			     (MTERPRI))
 			    (T (DISPLA MSG) (MTERPRI)))))))
 
-
+#-Multics
 (DEFMFUN $READ (&REST L)
   (MEVAL (APPLY #'$READONLY L)))
 
+#-Multics
 (DEFMFUN $READONLY (&REST L)
   (declare (special l))
   (MREAD-TERMINAL (CLOSURE '(L)
 			   #'(LAMBDA (STREAM CHAR) STREAM CHAR
 				     (IF L (APPLY #'$PRINT L))))))
 
+#-Multics
 (DEFUN MREAD-TERMINAL (PROMPT)
   (CADDR (FUNCALL TERMINAL-IO ':RUBOUT-HANDLER `((:PROMPT ,PROMPT))
 		  #'MREAD-RAW TERMINAL-IO)))
 
 
 
-#-LISPM
+#-(or LISPM Multics)
 (DEFUN ECHO-INPUT-STREAM-HANDLER (SELF OP DATA)
   (DECLARE (SPECIAL *INSTREAM*))
   (CASEQ OP
@@ -151,7 +154,7 @@
 	 (T
 	  (SFA-CALL (OR (SFA-GET SELF 0.) *INSTREAM*) OP DATA))))
 
-#-LISPM
+#-(or LISPM Multics)
 (DEFUN MAKE-ECHO-INPUT-STREAM (*INSTREAM*
 			       &OPTIONAL (OUTSTREAM STANDARD-OUTPUT))
   (DECLARE (SPECIAL *INSTREAM*))
@@ -191,6 +194,7 @@
 (DEFUN MAKE-INPUT-STREAM (X Y) Y ;ignore
   X)
 
+#+LISPM
 (DEFUN BATCH (FILENAME &OPTIONAL DEMO-P &AUX FILE-OBJ (accumulated-time 0.0))
   (UNWIND-PROTECT
     (CONTINUE (MAKE-ECHO-INPUT-STREAM
@@ -203,7 +207,19 @@
 	(MTELL "Batch spent ~A seconds in evaluation.~%"
 	       (FORMAT NIL "~2F" accumulated-time)))))
 
-#+LISPM
+#+Multics
+(DEFUN BATCH (FILENAME &OPTIONAL DEMO-P &AUX FILE-OBJ (accumulated-time 0.0))
+  (UNWIND-PROTECT
+    (CONTINUE (SETQ FILE-OBJ (OPENI FILENAME))
+	      (IF DEMO-P ':DEMO ':BATCH))
+    (IF FILE-OBJ (CLOSE FILE-OBJ))
+    (CURSORPOS 'A)
+    (if $showtime
+	(MTELL "Batch spent ~A seconds in evaluation.~%"
+	       (FORMAT NIL "~2F" accumulated-time)))))
+
+
+#+(OR LISPM Multics)
 (DEFUN $BATCH (&REST ARG-LIST)
   (BATCH (FILENAME-FROM-ARG-LIST ARG-LIST) NIL))
 

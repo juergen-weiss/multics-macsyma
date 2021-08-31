@@ -90,6 +90,7 @@
 ;; Temp autoloads needed for pdp-10. There is a better way
 ;; to distribute this info, too bad I never implemented it.
 
+#+pdp10
 (MAPC '(LAMBDA (X)
 	 (PUTPROP (CAR X) (GET (CDR X) 'AUTOLOAD) 'AUTOLOAD))
       '((PROC-$MATCHDECLARE . $MATCHDECLARE)

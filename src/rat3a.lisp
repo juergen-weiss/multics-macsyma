@@ -130,7 +130,7 @@
 
 (DECLARE (FIXNUM (*DBLREM FIXNUM FIXNUM FIXNUM)))
 
-#+NIL
+#+(OR NIL MacLisp)
 (DEFUN *DBLREM (A B M)
   ;; remind me to put the required primitives into NIL. -GJC
   (REMAINDER (TIMES A B) M))

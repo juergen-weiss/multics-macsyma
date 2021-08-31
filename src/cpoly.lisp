@@ -58,18 +58,21 @@
        )
 
 (defmacro cpoly-large-flonum ()
-	  #-LISPM '(fsc (lsh -1 -1) 0.)
+	  #-(or LISPM Multics) '(fsc (lsh -1 -1) 0.)
+	  #+Multics (fsc (lsh -1 -9) 127.)
 	  #+LISPM (let ((a (float 0)))
 		       (%p-dpb -1 1013 a) (%p-dpb -1 0007 a)
 		       (%p-dpb-offset -1 0030 a 1) a))
 
 (defmacro cpoly-small-flonum ()
-	  #-LISPM '(fsc (rot 1. -10.) 0.)
+	  #-(or LISPM Multics) '(fsc (rot 1. -10.) 0.)
+	  #+Multics (fsc (lsh -1 -9) -127.)
 	  #+LISPM (%p-dpb 100 0007 (float 0)))
 
 (defmacro float-precision (pres)
 	  pres ;Ignored on Lisp Machine
-	  #-LISPM `(*$ (fsc (lsh 205. 26.) 0.) ,pres)
+	  #-(or LISPM Multics) `(*$ (fsc (lsh 205. 26.) 0.) ,pres)
+	  #+Multics `(*$ (fsc 1. 1.) ,pres)
 	  #+LISPM (let ((a (float 1)))
 		       (%p-dpb-offset 1 0001 a 1) (- a 1.0)))
 

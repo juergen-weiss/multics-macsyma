@@ -137,7 +137,7 @@
      (COND ((MEMQ (CAAR ARRAY) '(MLIST $MATRIX))
 	    (LIST-REF ARRAY (CONS IND1 INDS) T VAL))
 	   ('else
-	    (MERROR "Bad use of /":/" on~%~M" ARRAY))))
+	    (MERROR "Bad use of "":"" on~%~M" ARRAY))))
     (T
      (MERROR "Bad argument to set as an array.~%~M" ARRAY)))
   VAL)

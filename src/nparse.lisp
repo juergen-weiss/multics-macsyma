@@ -127,7 +127,7 @@
        (NREVERSE (OR L (NCONS (PARSE-TYI))))) ; Read at least one char ...
     (IF (= (PARSE-TYI) #/\)
 	(SETQ C (PARSE-TYI))
-	(SETQ C (FIXNUM-CHAR-UPCASE C)))
+	#-Multics (SETQ C (FIXNUM-CHAR-UPCASE C)))
     (SETQ FLAG T)))
 
 (DEFUN SCAN-LISP-STRING () (IMPLODE (SCAN-STRING)))
@@ -150,8 +150,8 @@
       ($BFLOAT `((MTIMES) ((MPLUS) ,(READLIST (FIRST DATA))
 				   ((MTIMES) ,(READLIST (THIRD DATA))
 					     ((MEXPT) 10. ,(- (LENGTH (THIRD DATA))))))
-			  ((MEXPT) 10. ,(FUNCALL (IF (= (FIRST (FIFTH DATA)) #/-) #'- #'+)
-						 (READLIST (SIXTH DATA))))))))
+			  ((MEXPT) 10. ,(LEXPR-FUNCALL (IF (= (FIRST (FIFTH DATA)) #/-) #'- #'+)
+						 (LIST (READLIST (SIXTH DATA)))))))))
 
 (DEFUN SCAN-DIGITS (DATA CONTINUATION? CONTINUATION)
   (DO ((C (PARSE-TYIPEEK) (PARSE-TYIPEEK))
@@ -351,12 +351,12 @@
 (DEF-PROPL-CALL NUD (OP)
   (IF (OPERATORP OP)
       ;; If first element is an op, it better have a NUD
-      (MREAD-SYNERR "/"~A/" is not a prefix operator" (MOPSTRIP OP))
+      (MREAD-SYNERR """~A"" is not a prefix operator" (MOPSTRIP OP))
       ;; else take it as is.
       (CONS '$ANY OP)))
 
 (DEF-PROPL-CALL LED (OP L)
-  (MREAD-SYNERR "/"~A/" is not an infix operator" (MOPSTRIP OP)))
+  (MREAD-SYNERR """~A"" is not an infix operator" (MOPSTRIP OP)))
 
 )
 
@@ -442,12 +442,12 @@
 (DEFUN COLLISION-CHECK (OP ACTIVE-BITMASK KEY)
   (LET ((KEY-BITMASK (GET KEY OP)))
     (IF (NOT KEY-BITMASK)
-	(MREAD-SYNERR "/"~A/" is an unknown keyword in a ~A statement."
+	(MREAD-SYNERR """~A"" is an unknown keyword in a ~A statement."
 		      (MOPSTRIP KEY) (MOPSTRIP OP)))
     (LET ((COLLISION (COLLISION-LOOKUP OP ACTIVE-BITMASK KEY-BITMASK)))
       (IF COLLISION
 	  (IF (EQ COLLISION KEY)
-	      (MREAD-SYNERR "This ~A's /"~A/" slot is already filled."
+	      (MREAD-SYNERR "This ~A's ""~A"" slot is already filled."
 			    (MOPSTRIP OP)
 			    (MOPSTRIP KEY))
 	      (MREAD-SYNERR "A ~A cannot have a ~A with a ~A field."
@@ -596,7 +596,7 @@ entire input string to be printed out when an error occurs."
 	     (POP-C)
 	     (IF (SYMBOLP INPUT)
 		 (PUSH INPUT LABELS)
-		 (MREAD-SYNERR "Invalid /"&&/" tag. Tag must be a symbol")))
+		 (MREAD-SYNERR "Invalid ""&&"" tag. Tag must be a symbol")))
 	    (T
 	     (PARSE-BUG-ERR 'MREAD-RAW)))))))
 
@@ -756,7 +756,7 @@ entire input string to be printed out when an error occurs."
 	      (NREVERSE NL))			  ;   Put result back in order
 	   (IF (EQ '$/, (FIRST-C))		  ;  If not end, look for ","
 	       (POP-C)				  ;   and pop it if it's there
-	       (MREAD-SYNERR "Missing /"~A/""	  ;   or give an error message.
+	       (MREAD-SYNERR "Missing ""~A"""	  ;   or give an error message.
 			     (MOPSTRIP MATCH)))))))
 
 ;;; (CONVERT <exp> <mode>)
@@ -793,20 +793,20 @@ entire input string to be printed out when an error occurs."
 
 (DEFUN PARSE-BUG-ERR (OP)
   (MREAD-SYNERR
-    "Parser bug in /"~A/". Please report this to the Macsyma maintainers,~
+    "Parser bug in ""~A"". Please report this to the Macsyma maintainers,~
    ~%including the characters you just typed which caused the error. Thanks."
     (MOPSTRIP OP)))
 
 ;;; Random shared error messages
 
 (DEFUN DELIM-ERR (OP)
-  (MREAD-SYNERR "Illegal use of delimiter /"~A/"" (MOPSTRIP OP)))
+  (MREAD-SYNERR "Illegal use of delimiter ""~A""" (MOPSTRIP OP)))
 
 (DEFUN ERB-ERR (OP L) L ;Ignored
   (MREAD-SYNERR "Too many ~A's" (MOPSTRIP OP)))
 
 (DEFUN PREMTERM-ERR (OP)
-  (MREAD-SYNERR "Premature termination of input at /"~A/"."
+  (MREAD-SYNERR "Premature termination of input at ""~A""."
 		(MOPSTRIP OP)))
 
 
@@ -1067,8 +1067,8 @@ entire input string to be printed out when an error occurs."
 (DEF-MHEADER	|$>=| (MGEQP))
 
 
-(DEF-NUD (|$>| 80.) (OP) ; > is a single-char object
-  '($ANY . $/>))
+;(DEF-NUD (|$>| 80.) (OP) ; > is a single-char object
+;  '($ANY . $/>))
 
 (DEF-LED-EQUIV	|$<| PARSE-INFIX)
 (DEF-LBP	|$<| 80.)
@@ -1086,29 +1086,29 @@ entire input string to be printed out when an error occurs."
 (DEF-LPOS	|$<=| $EXPR)
 (DEF-MHEADER	|$<=| (MLEQP))
 
-(DEF-NUD-EQUIV	|$NOT| PARSE-PREFIX)
+(DEF-NUD-EQUIV	|$not| PARSE-PREFIX)
 ;LBP not needed
-(DEF-RBP	|$NOT| 70.)
-(DEF-POS	|$NOT| $CLAUSE)
-(DEF-RPOS	|$NOT| $CLAUSE)
-(DEF-LPOS	|$NOT| $CLAUSE)
-(DEF-MHEADER	|$NOT| (MNOT))
+(DEF-RBP	|$not| 70.)
+(DEF-POS	|$not| $CLAUSE)
+(DEF-RPOS	|$not| $CLAUSE)
+(DEF-LPOS	|$not| $CLAUSE)
+(DEF-MHEADER	|$not| (MNOT))
 
-(DEF-LED-EQUIV	|$AND| PARSE-NARY)
-(DEF-LBP	|$AND| 60.)
+(DEF-LED-EQUIV	|$and| PARSE-NARY)
+(DEF-LBP	|$and| 65.)
 ;RBP not needed
-(DEF-POS	|$AND| $CLAUSE)
+(DEF-POS	|$and| $CLAUSE)
 ;RPOS not needed
-(DEF-LPOS	|$AND| $CLAUSE)
-(DEF-MHEADER	|$AND| (MAND))
+(DEF-LPOS	|$and| $CLAUSE)
+(DEF-MHEADER	|$and| (MAND))
 
-(DEF-LED-EQUIV	|$OR| PARSE-NARY)
-(DEF-LBP	|$OR| 60.)
+(DEF-LED-EQUIV	|$or| PARSE-NARY)
+(DEF-LBP	|$or| 60.)
 ;RBP not needed
-(DEF-POS	|$OR| $CLAUSE)
+(DEF-POS	|$or| $CLAUSE)
 ;RPOS not needed
-(DEF-LPOS	|$OR| $CLAUSE)
-(DEF-MHEADER	|$OR| (MOR))
+(DEF-LPOS	|$or| $CLAUSE)
+(DEF-MHEADER	|$or| (MOR))
 
 (DEF-LED-EQUIV	|$,| PARSE-NARY)
 (DEF-LBP	|$,| 10.)
@@ -1118,19 +1118,19 @@ entire input string to be printed out when an error occurs."
 (DEF-LPOS	|$,| $ANY)
 (DEF-MHEADER	|$,| ($EV))
 
-(DEF-NUD-EQUIV |$THEN| DELIM-ERR)
-(DEF-LBP |$THEN| 5.)
-(DEF-RBP |$THEN| 25.)
+(DEF-NUD-EQUIV |$then| DELIM-ERR)
+(DEF-LBP |$then| 5.)
+(DEF-RBP |$then| 25.)
 
-(DEF-NUD-EQUIV |$ELSE| DELIM-ERR)
-(DEF-LBP |$ELSE| 5.)
-(DEF-RBP |$ELSE| 25.)
+(DEF-NUD-EQUIV |$else| DELIM-ERR)
+(DEF-LBP |$else| 5.)
+(DEF-RBP |$else| 25.)
 
-(DEF-NUD-EQUIV |$ELSEIF| DELIM-ERR)
-(DEF-LBP  |$ELSEIF| 5.)
-(DEF-RBP  |$ELSEIF| 45.)
-(DEF-POS  |$ELSEIF| $ANY)
-(DEF-RPOS |$ELSEIF| $CLAUSE)
+(DEF-NUD-EQUIV |$elseif| DELIM-ERR)
+(DEF-LBP  |$elseif| 5.)
+(DEF-RBP  |$elseif| 45.)
+(DEF-POS  |$elseif| $ANY)
+(DEF-RPOS |$elseif| $CLAUSE)
 
 ;No LBP - Default as high as possible
 (DEF-RBP     $IF 45.)
@@ -1139,7 +1139,7 @@ entire input string to be printed out when an error occurs."
 ;No LPOS
 (DEF-MHEADER $IF (MCOND))
 
-(DEF-NUD (|$IF|) (OP)
+(DEF-NUD (|$if|) (OP)
   (LIST* (POS OP)
 	 (MHEADER OP)
 	 (PARSE-CONDITION OP)))
@@ -1148,7 +1148,7 @@ entire input string to be printed out when an error occurs."
   (LIST* (PARSE (RPOS OP) (RBP OP))
 	 (IF (EQ (FIRST-C) '$THEN)
 	     (PARSE '$ANY (RBP (POP-C)))
-	     (MREAD-SYNERR "Missing /"THEN/""))
+	     (MREAD-SYNERR "Missing ""THEN"""))
 	 (CASEQ (FIRST-C)
 	   (($ELSE)   (LIST T (PARSE '$ANY (RBP (POP-C)))))
 	   (($ELSEIF) (PARSE-CONDITION (POP-C)))
@@ -1267,7 +1267,7 @@ entire input string to be printed out when an error occurs."
   |+| |-| |*| |^| |<| |=| |>| |(| |)| |[| |]| |,|
   |:| |!| |#| |'| |;| |$| |&|			
   ;;Two character
-  |**| |^^| |:=| |::| |!!| |<=| |=>| |''| |&&|			 
+  |**| |^^| |:=| |::| |!!| |<=| |>=| |''| |&&|
   ;; Three character
   |::=|
   )

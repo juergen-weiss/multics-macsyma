@@ -38,7 +38,7 @@
 
 (defun a-def-property (name argl body property n)
   (verify-as-subr-argument-list property argl n)
-  (cond ((status feature pdp10)
+  (cond #-Multics ((status feature pdp10)
 	 (cond ((memq compiler-state '(maklap compile))
 		`(defun (,name nil ,property) ,argl . ,body))
 	       ('else

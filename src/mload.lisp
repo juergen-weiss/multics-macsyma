@@ -306,7 +306,7 @@
 	(*MREAD-PROMPT* "(Batching) "))
     (IF $LOADPRINT
 	(MTELL "~%Batching the file ~M~%" NAME))
-    (WITH-OPEN-FILE (STREAM NAME '(:IN :ASCII))
+    (WITH-OPEN-FILE (STREAM NAME #-Multics '(:IN :ASCII) #+Multics '(in ascii))
       (DO ((FORM NIL (MREAD STREAM EOF)))
 	  ((EQ FORM EOF)
 	   (IF $LOADPRINT (MTELL "Batching done."))
@@ -318,7 +318,7 @@
 		&AUX
 		(FILENAME ($FILENAME_MERGE MACSYMA-USER-FILENAME)))
   "This is the generic file loading function.
-  LOAD(/"filename/") will either BATCHLOAD or LOADFILE the file,
+  LOAD(""filename"") will either BATCHLOAD or LOADFILE the file,
   depending on wether the file contains Macsyma, Lisp, or Compiled
   code. The file specifications default such that a compiled file
   is searched for first, then a lisp file, and finally a macsyma batch

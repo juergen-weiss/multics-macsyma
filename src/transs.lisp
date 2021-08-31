@@ -26,7 +26,7 @@
 	 to the TTY also.")
 
 (DEFMVAR $TR_WINDY T
-	 "Generate /"helpfull/" comments and programming hints.")
+	 "Generate ""helpfull"" comments and programming hints.")
 
 (DEFTRVAR *TRANSLATION-MSGS-FILES* NIL
 	"Where the warning and other comments goes.")

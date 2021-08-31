@@ -123,7 +123,7 @@
 (DEFMVAR NEED-PROG? NIL)
 (DEFMVAR ASSIGNS NIL "These are very-special variables which have a macsyma
 	assign property which must be called to bind and unbind the variable
-	whenever it is /"lambda/" bound.")
+	whenever it is ""lambda"" bound.")
 (DEFMVAR SPECIALS NIL "variables to declare special to the complr.")
 (DEFMVAR TRANSLATE-TIME-EVALABLES
 	'($MODEDECLARE $ALIAS $DECLARE $INFIX $NOFIX
@@ -911,7 +911,7 @@ APPLY means like APPLY.")
 	      (COND ((EQ ATOM '|&**|)  ;;; foolishness. The PARSER should do this.
 		     ;; Losing Fortran hackers.
 		     (TR-FORMAT
-			      "~%/"**/" is obsolete, use /"^/" !!!")
+			      "~%""**"" is obsolete, use ""^"" !!!")
 		     '|&^|)
 		    (T ATOM)))
 	     (T NIL)))

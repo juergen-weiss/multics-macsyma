@@ -162,7 +162,7 @@
 ;; for autoloading systems is in SUPRV.
 
 #-PDP10
-(DEFMACRO FIND-FUNCTION (FUNCTION) FUNCTION NIL)
+(DEFMACRO FIND-FUNCTION (FUNCTION) NIL)
 
 ;; Facility for loading auxilliary macro files such as RATMAC or MHAYAT.
 ;; Global macro files are loaded by the prelude file.

@@ -150,7 +150,7 @@
 		     ((= CHAR #/~)
 		      (PUSH CHAR TEXT-TEMP)
 		      (RETURN NIL))
-		     ((= CHAR #\CR)
+		     ((MEMQ CHAR '(#\CR #\newline))
 		      (DO ()
 			  ((NOT (WHITE-SPACE-P (TOP-MFORMAT-STRING))))
 			(CDR-MFORMAT-STRING))

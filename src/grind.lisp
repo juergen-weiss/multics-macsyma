@@ -6,10 +6,10 @@
 
 (DECLARE (GENPREFIX GRI)
 	 (SPECIAL LOP ROP STRING CHRPS $ALIASES ALIASLIST LINEL)
-	 (FIXNUM (CHRCT))
+	 (FIXNUM (CHCNT))
 	 (*EXPR LBP RBP))
 
-(DEFUN CHRCT () (- LINEL CHRPS))
+(DEFUN CHCNT () (- LINEL CHRPS))
 
 (DEFVAR ALPHABET '(#/% #/_))
 (DEFVAR FORTRANP NIL)
@@ -37,19 +37,19 @@
 
 (DEFUN MPRINT (X OUT)
   (COND ((FIXP X) (SETQ CHRPS (1+ CHRPS)) (TYO X OUT))
-	((< (CAR X) (CHRCT)) (MAPC #'(LAMBDA (L) (MPRINT L OUT)) (CDR X)))
+	((< (CAR X) (CHCNT)) (MAPC #'(LAMBDA (L) (MPRINT L OUT)) (CDR X)))
 	(T (PROG (I) (SETQ I CHRPS)
 	     (MPRINT (CADR X) OUT)
 	     (COND ((NULL (CDDR X)) (RETURN NIL))
-		   ((AND (OR (ATOM (CADR X)) (< (CAADR X) (CHRCT)))
-			 (OR (> (CHRCT) (// LINEL 2))
-			     (ATOM (CADDR X)) (< (CAADDR X) (CHRCT))))
+		   ((AND (OR (ATOM (CADR X)) (< (CAADR X) (CHCNT)))
+			 (OR (> (CHCNT) (// LINEL 2))
+			     (ATOM (CADDR X)) (< (CAADDR X) (CHCNT))))
 		    (SETQ I CHRPS)
 		    (MPRINT (CADDR X) OUT))
 		   (T (SETQ I (1+ I)) (SETQ CHRPS 0) (TERPRI OUT)
 		      (MTYOTBSP I OUT) (MPRINT (CADDR X) OUT)))
 	     (DO L (CDDDR X) (CDR L) (NULL L)
-		 (IF (OR (ATOM (CAR L)) (< (CAAR L) (CHRCT))) NIL
+		 (IF (OR (ATOM (CAR L)) (< (CAAR L) (CHCNT))) NIL
 		     (SETQ CHRPS 0) (TERPRI OUT) (MTYOTBSP I OUT))
 		 (MPRINT (CAR L) OUT))))))
 
@@ -65,20 +65,20 @@
 
 (DEFUN STRPRINT (X)
   (COND ((ATOM X) (STYO X))
-	((< (CAR X) (CHRCT)) (MAPC #'STRPRINT (CDR X)))
+	((< (CAR X) (CHCNT)) (MAPC #'STRPRINT (CDR X)))
 	(T (PROG (I)
 	     (SETQ I CHRPS)
 	     (STRPRINT (CADR X))
 	     (COND ((NULL (CDDR X)) (RETURN NIL))
-		   ((AND (OR (ATOM (CADR X)) (< (CAADR X) (CHRCT)))
-			 (OR (> (CHRCT) (// LINEL 2))
-			     (ATOM (CADDR X)) (< (CAADDR X) (CHRCT))))
+		   ((AND (OR (ATOM (CADR X)) (< (CAADR X) (CHCNT)))
+			 (OR (> (CHCNT) (// LINEL 2))
+			     (ATOM (CADDR X)) (< (CAADDR X) (CHCNT))))
 		    (SETQ I CHRPS)
 		    (STRPRINT (CADDR X)))
 		   (T (SETQ I (1+ I)) (SETQ CHRPS 0) (STERPRI)
 		      (STYOTBSP I) (STRPRINT (CADDR X))))
 	     (DO L (CDDDR X) (CDR L) (NULL L)
-		 (IF (OR (ATOM (CAR L)) (< (CAAR L) (CHRCT))) NIL
+		 (IF (OR (ATOM (CAR L)) (< (CAAR L) (CHCNT))) NIL
 		     (SETQ CHRPS 0) (STERPRI) (STYOTBSP I))
 		 (STRPRINT (CAR L)))))))
 

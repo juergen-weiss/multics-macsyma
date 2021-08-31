@@ -36,6 +36,13 @@
   `(aref ,@l)
   )
 
+(defmacro aset$ (val &rest l)
+  #+Maclisp
+  `(store (arraycall flonum ,@l) ,val)
+  #+Lispm
+  `(aset ,@l)
+  )
+
 (defmacro free-array% (a)
   #+Maclisp
   `(*rearray ,a)
@@ -53,8 +60,8 @@
   )
 
 (DEFMACRO DEFBINDTRAMP$ (NARGS)
-  (LET ((BIND-TRAMP$ (SYMBOLCONC 'BIND-TRAMP NARGS '$))
-	(TRAMP$ (SYMBOLCONC 'TRAMP NARGS '$)))
+  (LET ((BIND-TRAMP$ (SYMBOLCONC 'BIND-TRAMP (implode (explode NARGS)) '$))
+	(TRAMP$ (SYMBOLCONC 'TRAMP (implode (explode NARGS)) '$)))
     `(PROGN 'COMPILE
 	    (IF (FBOUNDP 'SPECIAL) (SPECIAL ,TRAMP$))
 	    (DEFMACRO ,BIND-TRAMP$ (F G &REST BODY)

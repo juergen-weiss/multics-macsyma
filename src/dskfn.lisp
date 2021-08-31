@@ -89,7 +89,7 @@
 			;;SAVE or STORE command.
 			#+Multics
 			(merror "First argument to ~:M must be a list.~
-				 ~%~:M([/"myfile/"],all); is acceptable."
+				 ~%~:M([""myfile""],all); is acceptable."
 				FN FN)
 			#-Multics
 			(FULLSTRIP (LIST $FILENAME

@@ -29,7 +29,7 @@
 
 
 (defun $ROMBERG_SUBR (FUNCTION LEFT RIGHT
-			       &aux (st "&the first arg to ROMBERG"))
+			       &aux (st '|&the first arg to ROMBERG|))
   (BIND-TRAMP1$
    F FUNCTION
    (LET ((A (FLOAT LEFT))
@@ -41,9 +41,9 @@
 	 (ROMB-PRINT NIL))
      (setq X (-$ B A))
      (SETF (AREF$ TT 0)
-	   (*$ x (+$ (FCALL$ F b st) (FCALL$ F a st)) 0.5))
+	   (*$ x (+$ (FCALL$ F b) (FCALL$ F a)) 0.5))
      (SETF	(AREF$ RR 0.)
-		(*$ x (FCALL$ F (*$ (+$ b a) 0.5) st)))
+		(*$ x (FCALL$ F (*$ (+$ b a) 0.5))))
      (do ((l 1. (1+ l)) (m 4. (* m 2.)) (y 0.0) (z 0.0) (cerr 0.0))
 	 ((= l $rombergit)
 	  (MERROR "ROMBERG failed to converge"))
@@ -62,7 +62,7 @@
 		       I
 		       CERR
 		       (+$ (*$ z (float i)) a))))
-	 (SETF (AREF$ RR L) (+$ (FCALL$ F (+$ (*$ z (float i)) a) st)
+	 (SETF (AREF$ RR L) (+$ (FCALL$ F (+$ (*$ z (float i)) a))
 				(AREF$ rr l))))
        (SETF (AREF$ RR L) (*$ z (AREF$ rr l) 2.0))
        (setq y 0.0)
