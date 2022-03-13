@@ -6,6 +6,8 @@
 ;; Compile-time support for defining things which dispatch
 ;; off the property list. The Macsyma parser uses this.
 
+(declare (genprefix dc))
+
 (DEFUN CHECK-SUBR-ARGL (L)
   (IF (OR (> (LENGTH L) 5.)
 	  (MEMQ '&REST L)
