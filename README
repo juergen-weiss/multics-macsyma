@@ -1,9 +1,19 @@
 move files from ecs, helpers and src into one directory
 
+move files from documentation into one directory named documentation and
+fix var macsyma-dir in multicsm.lisp for location of parent directory.
+
 compile-all.ec compiles all lisp files
 
 makemacsyma.ec generates a save file
 
 move files from the tests directory into a tests directory
 and run run-tests.ec to run all tests. Not all succeed.
+There are some deficiencies in comparing floating point results
+and different implementation dependent ordering of terms in
+results. But some seem to fail nevertheless.
+after   Error:  Exponent overflow by lisp_bignums_|3135
+        (>unbundled>bound_lisp_intrprtr_)
+        system handler for error returns to command level
+continue with start
 

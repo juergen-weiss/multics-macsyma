@@ -1,0 +1,6076 @@
+r 18:18 0.089 0
+
+
+lisp macsyma
+(c1) testbatch("tests2>rtest1.mac");
+done
+done
+
+"equal" 
+         2
+f(x) := x  + y
+         2
+f(x) := x  + y
+
+"equal" 
+y + 4
+y + 4
+
+"equal" 
+11
+11
+
+"equal" 
+	 2
+f(x) := sin (x) + 1
+	 2
+f(x) := sin (x) + 1
+
+"equal" 
+   2
+sin (x + 1) + 1
+   2
+sin (x + 1) + 1
+
+"equal" 
+g(y, z) := f(z) + 3 y
+g(y, z) := f(z) + 3 y
+
+"equal" 
+3 (z + 14) + 1.2298488
+3 (z + 14) + 1.2298489
+
+"not equal #######################################################" 
+	     i
+h(n) := sum(i x , i, 0, n)
+	     i
+h(n) := sum(i x , i, 0, n)
+
+"equal" 
+[f(x), g(y, z), h(n)]
+[f(x), g(y, z), h(n)]
+
+"equal" 
+t (x) := ratexpand(2 x t     (x) - t	 (x))
+ n		    n - 1	      n - 2
+t (x) := ratexpand(2 x t     (x) - t	 (x))
+ n		    n - 1	      n - 2
+
+"equal" 
+t (x) := 1
+ 0
+t (x) := 1
+ 0
+
+"equal" 
+t (x) := x
+ 1
+t (x) := x
+ 1
+
+"equal" 
+   4      2
+8 y  - 8 y  + 1
+   4      2
+8 y  - 8 y  + 1
+
+"equal" 
+g (x) := sum(ev(x), i, n, n + 2)
+ n
+g (x) := sum(ev(x), i, n, n + 2)
+ n
+
+"equal" 
+h(n, x) := sum(ev(x), i, n, n + 2)
+h(n, x) := sum(ev(x), i, n, n + 2)
+
+"equal" 
+   2
+3 i
+   2
+3 i
+
+"equal" 
+29
+29
+
+"equal" 
+	         1          2     n
+p (x) := ratsimp(----- diff((x  - 1) , x, n))
+ n	        n
+	       2  n!
+	         1          2     n
+p (x) := ratsimp(----- diff((x  - 1) , x, n))
+ n	        n
+	       2  n!
+
+"equal" 
+		 1	  2     n
+q(n, x) := ratsimp(----- diff((x  - 1) , x, n))
+		n
+	         2  n!
+		 1	  2     n
+q(n, x) := ratsimp(----- diff((x  - 1) , x, n))
+		n
+	         2  n!
+
+"equal" 
+	     2
+	  3 x  - 1
+lambda([x], --------)
+	     2
+	     2
+	  3 x  - 1
+lambda([x], --------)
+	     2
+
+"equal" 
+         2
+3 (y + 1)  - 1
+--------------
+      2
+         2
+3 (y + 1)  - 1
+--------------
+      2
+
+"equal" 
+   2
+3 y  - 1
+--------
+   2
+   2
+3 y  - 1
+--------
+   2
+
+"equal" 
+37
+37
+
+"equal" 
+	      i	 j
+f    (x, y) := x  + y
+ i, j
+	      i	 j
+f    (x, y) := x  + y
+ i, j
+
+"equal" 
+g(fun, a, b) := print(fun, " applied to ", a, " and ", b, " is ", fun(a, b))
+g(fun, a, b) := print(fun, " applied to ", a, " and ", b, " is ", fun(a, b))
+
+"equal" 
+		2
+lambda([x, y], y + x )  applied to  0  and  2 c  is  2 c 
+2 c
+2 c
+
+"equal" 
+1.5403023
+1.5403023
+
+"not equal #######################################################" Batch spent 
+0.0 seconds in evaluation 
+Evaluation took 1099 ms.
+(d1) 			       done
+
+(c2) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest1a.mac");
+bil
+bil
+
+"equal" 
+bil
+   1
+false
+
+"not equal #######################################################" 
+3
+3
+
+"equal" 
+3
+3
+
+"equal" 
+[#####, 3, #####, #####]
+[false, 3, false, false]
+
+"not equal #######################################################" 
+[declared, 1, [3]]
+[declared, 1, [3]]
+
+"equal" 
+2
+2
+
+"equal" 
+ha
+  3
+false
+
+"not equal #######################################################" 
+[hashed, 1, [1]]
+[hash_table, 1, 1]
+
+"not equal #######################################################" 
+false
+false
+
+"equal" 
+bil1
+bil1
+
+"equal" 
+bil1
+    2
+bil1
+    2
+
+"equal" 
+3
+3
+
+"equal" 
+3
+3
+
+"equal" 
+[#####, #####, 3, #####]
+[munbound, munbound, 3, munbound]
+
+"not equal #######################################################" 
+[declared, 1, [3]]
+[declared, 1, [3]]
+
+"equal" 
+8
+8
+
+"equal" 
+oldha
+     2
+oldha
+     2
+
+"equal" 
+[hashed, 1, [1]]
+[hashed, 1, [1]]
+
+"equal" 
+true
+true
+
+"equal" 
+bilx  := n bilx
+    n	     n - 1
+bilx  := n bilx
+    n	     n - 1
+
+"equal" 
+1
+1
+
+"equal" 
+6
+6
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 275 ms.
+(d1) 			       done
+
+(c2) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest2.mac");
+done
+done
+
+"equal" 
+false
+false
+
+"equal" 
+a  := n a
+ n       n - 1
+a  := n a
+ n       n - 1
+
+"equal" 
+1
+1
+
+"equal" 
+120
+120
+
+"equal" 
+a  := n
+ n
+a  := n
+ n
+
+"equal" 
+6
+6
+
+"equal" 
+24
+24
+
+"equal" 
+done
+done
+
+"equal" 
+	         2    2    2
+lambda([x, y, z], x  + y  + z )
+	         2    2    2
+lambda([x, y, z], x  + y  + z )
+
+"equal" 
+ 2
+a  + 5
+ 2
+a  + 5
+
+"equal" 
+a + 3
+a + 3
+
+"equal" 
+  2  y
+[x , -, - 2]
+     3
+  2  y
+[x , -, - 2]
+     3
+
+"equal" 
+ 3
+x
+ 3
+x
+
+"equal" 
+      2  y         3
+[a, [x , -, - 2], x ]
+         3
+      2  y         3
+[a, [x , -, - 2], x ]
+         3
+
+"equal" 
+[ a  0 ]
+[      ]
+[ b  1 ]
+matrix([a, 0], [b, 1])
+
+"equal" 
+[  2    ]
+[ a   0 ]
+[       ]
+[  2    ]
+[ b   1 ]
+         2        2
+matrix([a , 0], [b , 1])
+
+"equal" 
+[    2	   ]
+[   a	 0 ]
+[	   ]
+[ a b + b	 1 ]
+         2
+matrix([a , 0], [a b + b, 1])
+
+"equal" 
+[  2     ]
+[ a    0 ]
+[        ]
+[ a b  a ]
+         2
+matrix([a , 0], [a b, a])
+
+"equal" 
+[   1    1 ]
+[ 	 ]
+[ 1 - b  a ]
+matrix([1, 1], [1 - b, a])
+
+"equal" 
+[  1     ]
+[  -   0 ]
+[  a     ]
+[        ]
+[   b    ]
+[ - -  1 ]
+[   a    ]
+        1	      - b
+matrix([-, 0], [---, 1])
+        a	       a
+
+"equal" 
+[ b y + a x  y ]
+matrix([b y + a x, y])
+
+"equal" 
+[ a  b  c ]
+[         ]
+[ d  e  f ]
+[         ]
+[ g  h  i ]
+matrix([a, b, c], [d, e, f], [g, h, i])
+
+"equal" 
+[	     2				  ]
+[ c g + b d + a    c h + b e + a b  c i + b f + a c ]
+[					  ]
+[ 		      2			  ]
+[ f g + d e + a d  f h + e  + b d   f i + e f + c d ]
+[					  ]
+[			       2		  ]
+[ g i + d h + a g  h i + e h + b g  i  + f h + c g  ]
+		 2
+matrix([c g + b d + a , c h + b e + a b, c i + b f + a c], 
+
+		     2
+[f g + d e + a d, f h + e  + b d, f i + e f + c d], 
+
+			      2
+[g i + d h + a g, h i + e h + b g, i  + f h + c g])
+
+"equal" 
+         2
+x + 1 = y
+         2
+x + 1 = y
+
+"equal" 
+x - 1 = 2 y + 1
+x - 1 = 2 y + 1
+
+"equal" 
+       2
+2 x = y  + 2 y + 1
+       2
+2 x = y  + 2 y + 1
+
+"equal" 
+x + 1
+----- = y
+  y
+x + 1
+----- = y
+  y
+
+"equal" 
+  y     1
+----- = -
+x + 1   y
+  y     1
+----- = -
+x + 1   y
+
+"equal" 
+fib  := if n = 1 or n = 2 then 1 else fib      + fib
+   n				 n - 1	  n - 2
+fib  := if n = 1 or n = 2 then 1 else fib      + fib
+   n				 n - 1	  n - 2
+
+"equal" 
+2
+2
+
+"equal" 
+2
+2
+
+"equal" 
+5
+5
+
+"equal" 
+eta(mu, nu) := if mu = nu then mu else (if mu > nu then mu - nu else mu + nu)
+eta(mu, nu) := if mu = nu then mu else (if mu > nu then mu - nu else mu + nu)
+
+"equal" 
+11
+11
+
+"equal" 
+4
+4
+
+"equal" 
+a
+a
+
+"equal" 
+done
+done
+
+"equal" 
+hessian(f) := block([dfxx, dfxy, dfxz, dfyy, dfyz, dfzz], 
+
+dfxx : diff(f, x, 2), dfxy : diff(f, x, 1, y, 1), dfxz : diff(f, x, 1, z, 1), 
+
+dfyy : diff(f, y, 2), dfyz : diff(f, y, 1, z, 1), dfzz : diff(f, z, 2), 
+
+determinant(matrix([dfxx, dfxy, dfxz], [dfxy, dfyy, dfyz], 
+
+[dfxz, dfyz, dfzz])))
+hessian(f) := block([dfxx, dfxy, dfxz, dfyy, dfyz, dfzz], 
+
+dfxx : diff(f, x, 2), dfxy : diff(f, x, 1, y, 1), dfxz : diff(f, x, 1, z, 1), 
+
+dfyy : diff(f, y, 2), dfyz : diff(f, y, 1, z, 1), dfzz : diff(f, z, 2), 
+
+determinant(matrix([dfxx, dfxy, dfxz], [dfxy, dfyy, dfyz], 
+
+[dfxz, dfyz, dfzz])))
+
+"equal" 
+done
+done
+
+"equal" 
+	  2	      2	     3	         2  3
+- 3 a y (9 a  x z + 18 a y ) - 27 a  x y z - 54 a  x
+	    2	        2	       3		     2  3
+(- 3) a y (9 a  x z + 18 a y ) - 27 a  x y z + (- 54) a  x
+
+"equal" 
+ 3	    3
+y  + a x y + x
+ 3	    3
+y  + a x y + x
+
+"equal" 
+f(x) := block([a, y], local(a), y : 4, a  : x, display(a ))
+				y	      y
+f(x) := block([a, y], local(a), y : 4, a  : x, display(a ))
+				y	      y
+
+"equal" 
+2
+2
+
+"equal" 
+0
+0
+
+"equal" 
+			      a  = 9
+			       4
+
+done
+done
+
+"equal" 
+0
+0
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 1437 ms.
+(d1) 			       done
+
+(c2) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest3.mac");
+done
+done
+
+"equal" 
+(e1) 			      a = - 3
+
+(e2) 			       a = 4
+
+(e3) 			      a = 11
+
+(e4) 			      a = 18
+
+(e5) 			      a = 25
+
+done
+done
+
+"equal" 
+0
+0
+
+"equal" 
+done
+done
+
+"equal" 
+55
+55
+
+"equal" 
+1
+1
+
+"equal" 
+  sin(x)
+%e
+  sin(x)
+%e
+
+"equal" 
+done
+done
+
+"equal" 
+ 7    6	  5    4	  2
+x    x	 x    x	 x
+-- - --- - -- - -- + -- + x + 1
+90   240	 15   8	 2
+ 7    6	    5	 4    2
+x    x	 - x    - x    x
+-- - --- + ---- + ---- + -- + x + 1
+90   240	  15     8     2
+
+"equal" 
+0
+0
+
+"equal" 
+done
+done
+
+"equal" 
+   5      4       3	      2
+5 x  + 9 x  + 12 x  + 14 x  + 15 x
+   5      4       3	      2
+5 x  + 9 x  + 12 x  + 14 x  + 15 x
+
+"equal" 
+- 3.0
+- 3.0
+
+"equal" 
+- 3.1622807
+- 3.1622807
+
+"equal" 
+(e6) 			     count = 2
+
+(e7) 			     count = 6
+
+(e8) 			    count = 18
+
+done
+done
+
+"equal" 
+1000
+1000
+
+"equal" 
+done
+done
+
+"equal" 
+2.282429
+2.282429
+
+"not equal #######################################################" 
+[x]
+[x]
+
+"equal" 
+newton(f, guess) := block([numer, y], local(f, df, x, guess), numer : true, 
+
+define(df(x), diff(f(x), x)), do (y : df(guess), 
+
+if y = 0 then error("derivative at", guess, "is zero"), 
+
+	      f(guess)
+guess : guess - --------, if abs(f(guess)) < 0.000005 then return(guess)))
+	         y
+newton(f, guess) := block([numer, y], local(f, df, x, guess), numer : true, 
+
+define(df(x), diff(f(x), x)), do (y : df(guess), 
+
+if y = 0 then error("derivative at", guess, "is zero"), 
+
+	      f(guess)
+guess : guess - --------, if abs(f(guess)) < 0.000005 then return(guess)))
+	         y
+
+"equal" 
+	 2
+sqr(x) := x  - 5.0
+	 2
+sqr(x) := x  - 5.0
+
+"equal" 
+2.236068
+2.236068
+
+"not equal #######################################################" 
+(e9) 			        0.0
+
+(e10) 			     rho(1.0)
+
+(e11) 			    0.78539816
+
+done
+done
+
+"equal" 
+e10
+e10
+
+"equal" 
+done
+done
+
+"equal" 
+done
+done
+
+"equal" 
+   d
+x (-- (f(x))) + f(x)
+   dx
+   d
+x (-- (f(x))) + f(x)
+   dx
+
+"equal" 
+f(x) := sin(x)
+f(x) := sin(x)
+
+"equal" 
+sin(x) + x cos(x)
+sin(x) + x cos(x)
+
+"equal" 
+x
+x
+
+"equal" 
+3
+3
+
+"equal" 
+3
+3
+
+"equal" 
+x
+x
+
+"equal" 
+         2
+f(x) := x
+         2
+f(x) := x
+
+"equal" 
+f(2)
+f(2)
+
+"equal" 
+4
+4
+
+"equal" 
+f(2)
+f(2)
+
+"equal" 
+4
+4
+
+"equal" 
+33
+33
+
+"equal" 
+ 4
+====
+\
+ >    i!
+/
+====
+i = 1
+ 4
+====
+\
+ >    i!
+/
+====
+i = 1
+
+"equal" 
+[x]
+[x]
+
+"equal" 
+ b
+/
+[   2
+I  x  dx
+]
+/
+ a
+ b
+/
+[   2
+I  x  dx
+]
+/
+ a
+
+"equal" 
+done
+done
+
+"equal" 
+s + 55
+s + 55
+
+"equal" 
+55
+55
+
+"equal" 
+s + 110
+s + 110
+
+"equal" 
+ n
+====
+\
+ >    g(i)
+/
+====
+i = 0
+ n
+====
+\
+ >    g(i)
+/
+====
+i = 0
+
+"equal" 
+    z
+z %e
+    z
+z %e
+
+"equal" 
+      2
+ 2   x
+x  %e
+      2
+ 2   x
+x  %e
+
+"equal" 
+ n
+====
+\
+ >    g(i)
+/
+====
+i = 0
+ n
+====
+\
+ >    g(i)
+/
+====
+i = 0
+
+"equal" 
+ n
+====
+\
+ >    g(i)
+/
+====
+i = 0
+ n
+====
+\
+ >    g(i)
+/
+====
+i = 0
+
+"equal" 
+ n
+====
+\
+ >    g(i) + 1
+/
+====
+i = 0
+ n
+====
+\
+ >    g(i) + 1
+/
+====
+i = 0
+
+"equal" 
+done
+done
+
+"equal" 
+a
+a
+
+"equal" 
+done
+done
+
+"equal" 
+/
+[  2
+I y  dy
+]
+/
+/
+[  2
+I y  dy
+]
+/
+
+"equal" 
+ 3
+y
+--
+3
+ 3
+y
+--
+3
+
+"equal" 
+f(y) := diff(y log(y), y, 2)
+f(y) := diff(y log(y), y, 2)
+
+"equal" 
+        1
+f(y) := -
+        y
+        1
+f(y) := -
+        y
+
+"equal" 
+c10
+c10
+
+"equal" 
+       3
+(y + x)
+       3
+(y + x)
+
+"equal" 
+         2
+3 (y + x)
+         2
+3 (y + x)
+
+"equal" 
+ 2
+x  + 1
+ 2
+x  + 1
+
+"equal" 
+done
+done
+
+"equal" 
+    x    %i x     - %i x 2
+  %e  (%e	    - %e	    )
+- ------------------------
+	   4
+     x	 %i x     - %i x 2
+(- %e ) (%e     - %e      )
+----------------------------
+	   4
+
+"equal" 
+    (2 %i + 1) x	 (1 - 2 %i) x
+  %e	         %e	          x
+  -------------- + -------------- - 2 %e
+     2 %i + 1	  1 - 2 %i
+- ---------------------------------------
+		 4
+     (2 %i + 1) x	  (1 - 2 %i) x
+   %e	          %e		     x
+- (-------------- + -------------- + (- 2) %e )
+      2 %i + 1	   1 - 2 %i
+-----------------------------------------------
+		   4
+
+"not equal #######################################################" 
+    x			     x
+  %e  (%i sin(2 x) + cos(2 x))   %e  (cos(2 x) - %i sin(2 x))       x
+  ---------------------------- + ---------------------------- - 2 %e
+	  2 %i + 1		   1 - 2 %i
+- -------------------------------------------------------------------
+			     4
+     x			      x
+   %e  (%i sin(2 x) + cos(2 x))   %e  (cos(2 x) - %i sin(2 x))	   x
+- (---------------------------- + ---------------------------- + (- 2) %e )
+	   2 %i + 1		    1 - 2 %i
+---------------------------------------------------------------------------
+			       4
+
+"not equal #######################################################" 
+    x	         x	    x
+  %e  sin(2 x)   %e  cos(2 x)	  %e
+- ------------ - ------------ + ---
+       5		  10	   2
+     x		 x	      x
+(- %e ) sin(2 x)   %e  cos(2 x)   %e
+---------------- - ------------ + ---
+       5		    10	     2
+
+"equal" 
+0.57791601
+0.57791603
+
+"not equal #######################################################" 
+      x		 x	        x
+  2 %e  sin(2 x) + %e  cos(2 x) - 5 %e
+- -------------------------------------
+	         10
+       x		  x		   x
+- (2 %e  sin(2 x) + %e  cos(2 x) + (- 5) %e )
+---------------------------------------------
+		 10
+
+"not equal #######################################################" 
+      x		 x	        x
+  2 %e  sin(2 x) + %e  cos(2 x) - 5 %e
+- -------------------------------------
+	         10
+       x		  x		   x
+- (2 %e  sin(2 x) + %e  cos(2 x) + (- 5) %e )
+---------------------------------------------
+		 10
+
+"not equal #######################################################" 
+0
+0
+
+"equal" 
+sin(x)
+sin(x)
+
+"equal" 
+    %pi	    1
+sin(---) + -------
+    12	 sqrt(3)
+    %pi	    1
+sin(---) + -------
+    12	 sqrt(3)
+
+"equal" 
+0.8361693
+0.83616933
+
+"not equal #######################################################" 
+sin(1)
+sin(1)
+
+"equal" 
+0.84147099
+0.841471
+
+"not equal #######################################################" 
+     1  2
+beta(-, -)
+     2  5
+     1  2
+beta(-, -)
+     2  5
+
+"equal" 
+3.6790927
+3.6790927
+
+"equal" 
+        1
+-----------------
+2 (1 - x) sqrt(x)
+        1
+-----------------
+2 (1 - x) sqrt(x)
+
+"equal" 
+25
+25
+
+"equal" 
+4.794255386042030002732879b-1
+4.794255386042030002732879b-1
+
+"not equal #######################################################" 
+   2	   2
+cos (x) - sin (x)
+   2	   2
+cos (x) - sin (x)
+
+"equal" 
+  1
+- -
+  2
+- 1
+---
+ 2
+
+"equal" 
+- 4 cos(x) sin(x)
+(- 4) cos(x) sin(x)
+
+"equal" 
+sin(2 x)	         sin(2 x)
+-------- + x   x - --------
+   2		  2
+------------ - ------------
+     2	          2
+sin(2 x)	         sin(2 x)
+-------- + x   x - --------
+   2		  2
+------------ - ------------
+     2	          2
+
+"not equal #######################################################" 
+sin(2 x)
+--------
+   2
+sin(2 x)
+--------
+   2
+
+"equal" 
+cos(x) sin(x)
+cos(x) sin(x)
+
+"equal" 
+sin(2 x)
+--------
+   2
+sin(2 x)
+--------
+   2
+
+"equal" 
+cos(2 x)
+cos(2 x)
+
+"equal" 
+0
+0
+
+"equal" 
+    2			 2        2	         2
+sech (x) sinh(x) tanh(x)   cosh (x) sech (x) tanh(x)   sech (x) tanh(x)
+------------------------ + ------------------------- + ----------------
+	  2		         2		   2
+        coth (x)		     coth (x)	         coth (x)
+    2			 2        2	         2
+sech (x) sinh(x) tanh(x)   cosh (x) sech (x) tanh(x)   sech (x) tanh(x)
+------------------------ + ------------------------- + ----------------
+	  2		         2		   2
+        coth (x)		     coth (x)	         coth (x)
+
+"equal" 
+	   2		          2        2
+         sech (x) sinh(x) tanh(x)   cosh (x) sech (x) tanh(x)
+trigsimp(------------------------ + -------------------------
+		 2		        2
+	       coth (x)		    coth (x)
+
+						      2
+						  sech (x) tanh(x)
+					          + ----------------)
+							2
+						      coth (x)
+    5	     4	        3
+sinh (x) + sinh (x) + 2 sinh (x)
+--------------------------------
+	      5
+	  cosh (x)
+
+"not equal #######################################################" Batch spent 
+0.0 seconds in evaluation 
+Evaluation took 5717 ms.
+(d1) 			       done
+
+(c1) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest4.mac");
+done
+done
+
+"equal" 
+        %i x     - %i x
+  %i (%e	   - %e	   )
+- ----------------------
+	  2
+	%i x     - %i x
+(- %i) (%e     - %e	     )
+--------------------------
+	  2
+
+"equal" 
+     2    4
+    x    x
+1 - -- + --- + . . .
+    6    120
+     2    4
+    x    x
+1 - -- + ---
+    6    120
+
+"equal" 
+     2
+2 cos (x) - 1
+     2
+2 cos (x) - 1
+
+"equal" 
+	  2
+(2 %i + 1.5)
+	  2
+(2 %i + 1.5)
+
+"equal" 
+6.0 %i - 1.75
+6.0 %i - 1.75
+
+"equal" 
+     1//4
+(- 1)     sqrt(2)
+     1//4
+(- 1)     sqrt(2)
+
+"equal" 
+done
+done
+
+"equal" 
+	        d		         2
+cos(y) + sin(x) + -- (sin(w)) + (w + 1)
+	        dw
+	        d		         2
+cos(y) + sin(x) + -- (sin(w)) + (w + 1)
+	        dw
+
+"equal" 
+	2
+cos(w) + w  + 2 w + cos(1) + 1.9092974
+	2
+cos(w) + w  + 2 w + cos(1) + 1.909297
+
+"not equal #######################################################" 
+y + a + 2
+y + a + 2
+
+"equal" 
+   3
+  d      2          2
+------ (y  + x y + x )
+  2
+dx  dy
+   3
+  d      2          2
+------ (y  + x y + x )
+  2
+dx  dy
+
+"equal" 
+0
+0
+
+"equal" 
+2 x - 3 y = 3
+2 x - 3 y = 3
+
+"equal" 
+2 y - 3 x = - 4
+2 y - 3 x = - 4
+
+"equal" 
+        1	     6
+[[y = - -, x = -]]
+        5	     5
+      - 1	     6
+[[y = ---, x = -]]
+       5	     5
+
+"equal" 
+3 = 3
+3 = 3
+
+"equal" 
+    1
+x + - > sqrt(%pi)
+    x
+    1
+x + - > sqrt(%pi)
+    x
+
+"equal" 
+2.5 > 1.7724538
+2.5 > 1.7724538
+
+"equal" 
+true
+true
+
+"equal" 
+true
+true
+
+"equal" 
+false
+false
+
+"equal" 
+dontknow
+dontknow
+
+"equal" 
+    1	     3	 2
+(-------- - --------)
+        4	         3
+ (y + x)	  (z + y)
+    1	     3	 2
+(-------- - --------)
+        4	         3
+ (y + x)	  (z + y)
+
+"equal" 
+	6	     9	      1
+- ----------------- + -------- + --------
+         4        3	         6          8
+  (y + x)  (z + y)	  (z + y)	   (y + x)
+       - 6	   9	    1
+----------------- + -------- + --------
+       4	      3	       6	        8
+(y + x)  (z + y)    (z + y)	 (y + x)
+
+"equal" 
+a . f + a . c . e + a . c . d + a . b
+a . f + a . (c . e) + a . (c . d) + a . b
+
+"equal" 
+ 3      2
+x  + 3 x  + 3 x + 1
+ 3      2
+x  + 3 x  + 3 x + 1
+
+"equal" 
+       7
+(x + 1)
+       7
+(x + 1)
+
+"equal" 
+ 7      6	      5	    4	  3       2
+x  + 7 x  + 21 x  + 35 x  + 35 x  + 21 x  + 7 x + 1
+ 7      6	      5	    4	  3       2
+x  + 7 x  + 21 x  + 35 x  + 35 x  + 21 x  + 7 x + 1
+
+"equal" 
+ 7      6	      5	    4	  3       2
+x  + 7 x  + 21 x  + 35 x  + 35 x  + 21 x  + 7 x + 1
+ 7      6	      5	    4	  3       2
+x  + 7 x  + 21 x  + 35 x  + 35 x  + 21 x  + 7 x + 1
+
+"equal" 
+         2
+a (c + b)  + a c + a b
+         2
+a (c + b)  + a c + a b
+
+"equal" 
+      3	      2	    2	   3
+- 27 y  + 54 x y  - 36 x  y + 8 x
+        3	        2	          2        3
+(- 27) y  + 54 x y  + (- 36) x  y + 8 x
+
+"equal" 
+ x - 1	   1
+-------- + -----
+       2	 x - 1
+(x + 1)
+ x - 1	   1
+-------- + -----
+       2	 x - 1
+(x + 1)
+
+"equal" 
+     x	          1	  1
+------------ - ------------ + -----
+ 2	      2	          x - 1
+x  + 2 x + 1   x  + 2 x + 1
+     x	          1	  1
+------------ - ------------ + -----
+ 2	      2	          x - 1
+x  + 2 x + 1   x  + 2 x + 1
+
+"equal" 
+        2
+     2 x		     2
+--------------- + ---------------
+ 3    2	         3    2
+x  + x  - x - 1   x  + x  - x - 1
+        2
+     2 x		     2
+--------------- + ---------------
+ 3    2	         3    2
+x  + x  - x - 1   x  + x  - x - 1
+
+"equal" 
+		        2	     2
+      x	      (log(x) + 1)  - log (x)
+sin(------) = %e
+     2
+    x  + x
+		        2	     2
+      x	      (log(x) + 1)  - log (x)
+sin(------) = %e
+     2
+    x  + x
+
+"equal" 
+      1	       2
+sin(-----) = %e x
+    x + 1
+      1	       2
+sin(-----) = %e x
+    x + 1
+
+"equal" 
+         a
+b x + b (- - x) + a
+         b
+         a
+b x + b (- - x) + a
+         b
+
+"equal" 
+2 a
+2 a
+
+"equal" 
+       3//2
+(x - 1)	  - sqrt(x - 1) (x + 1)
+---------------------------------
+     sqrt(x - 1) sqrt(x + 1)
+       3//2
+(x - 1)	  - sqrt(x - 1) (x + 1)
+---------------------------------
+     sqrt(x - 1) sqrt(x + 1)
+
+"equal" 
+       2
+- -----------
+  sqrt(x + 1)
+    - 2
+-----------
+sqrt(x + 1)
+
+"equal" 
+  2
+ a  + 1
+ ------
+   a
+x
+  2
+ a  + 1
+ ------
+   a
+x
+
+"equal" 
+      2		  a
+(log(x  + x) - log(x))
+-----------------------
+	    a//2
+    log(x + 1)
+      2		  a
+(log(x  + x) - log(x))
+-----------------------
+	    a//2
+    log(x + 1)
+
+"equal" 
+	a//2
+log(x + 1)
+	a//2
+log(x + 1)
+
+"equal" 
+     2 x	    x
+log(a    + 2 a  + 1)
+--------------------
+         x
+    log(a  + 1)
+     2 x	    x
+log(a    + 2 a  + 1)
+--------------------
+         x
+    log(a  + 1)
+
+"equal" 
+2
+2
+
+"equal" 
+   x
+ %e  - 1
+----------
+  x//2
+%e     + 1
+   x
+ %e  - 1
+----------
+  x//2
+%e     + 1
+
+"equal" 
+  x//2
+%e     - 1
+  x//2
+%e     - 1
+
+"equal" 
+done
+done
+
+"equal" 
+b + a   b + a
+----- + -----
+  y       x
+b + a   b + a
+----- + -----
+  y       x
+
+"equal" 
+    1	   x	   f(x)
+- ----- + -------- - --------
+  x - y	       2	        3
+	(x - y)	 (x - y)
+ - 1	 x        - f(x)
+----- + -------- + --------
+x - y	     2	      3
+        (x - y)    (x - y)
+
+"equal" 
+	         2
+x (x - y) - (x - y)  - f(x)
+         2
+- (x - y)  + x (x - y) - f(x)
+
+"equal" 
+   2
+- y  + x y - f(x)
+   2
+- y  + x y - f(x)
+
+"equal" 
+       10	 2	      2  2
+(b + a)   s  + 2 a b s + a  b
+------------------------------
+	       2
+	  a b s
+       10	 2	      2  2
+(b + a)   s  + 2 a b s + a  b
+------------------------------
+	       2
+	  a b s
+
+"equal" 
+	       10
+2   a b   (b + a)
+- + --- + ---------
+s    2	   a b
+    s
+	       10
+2   a b   (b + a)
+- + --- + ---------
+s    2	   a b
+    s
+
+"equal" 
+a . f + a . c . (e + d) + a . b
+a . f + a . (c . (e + d)) + a . b
+
+"equal" 
+	         20
+    1	  (x + 2)	  - 2 y	    x
+--------- + --------------- - ---------
+       19		  20	       20
+(y + x)	     (y + x)        (y + x)
+	         20
+    1	  (x + 2)	  - 2 y	   - x
+--------- + --------------- + ---------
+       19		  20	       20
+(y + x)	     (y + x)        (y + x)
+
+"equal" 
+       20
+(x + 2)   - y
+-------------
+         20
+  (y + x)
+       20
+(x + 2)   - y
+-------------
+         20
+  (y + x)
+
+"equal" 
+  2       2        1
+----- - ----- + --------
+x + 2   x + 1	   2
+	      (x + 1)
+  2       2        1
+----- - ----- + --------
+x + 2   x + 1	   2
+	      (x + 1)
+
+"equal" 
+	 x
+- -------------------
+   3      2
+  x  + 4 x  + 5 x + 2
+        - x
+-------------------
+ 3      2
+x  + 4 x  + 5 x + 2
+
+"equal" 
+  2       2        1
+----- - ----- + --------
+x + 2   x + 1	   2
+	      (x + 1)
+  2       2        1
+----- - ----- + --------
+x + 2   x + 1	   2
+	      (x + 1)
+
+"equal" 
+ 2
+7  73 127 337 92737 649657
+ 2
+7  73 127 337 92737 649657
+
+"not equal #######################################################" 
+(2 y + x) (z - 2) (z + 2)
+(2 y + x) (z - 2) (z + 2)
+
+"equal" 
+ 2  2	   2    2	   2
+x  y  + 2 x y  + y  - x  - 2 x - 1
+ 2  2	   2    2	   2
+x  y  + 2 x y  + y  - x  + (- 2) x - 1
+
+"equal" 
+  2
+(x  + 2 x + 1) (y - 1)
+----------------------
+      36 (y + 1)
+  2
+(x  + 2 x + 1) (y - 1)
+----------------------
+      36 (y + 1)
+
+"equal" 
+   x	   2 x	 x
+(%e  + 1) (%e    - %e  + 1)
+   x	   2 x	 x
+(%e  + 1) (%e    - %e  + 1)
+
+"equal" 
+  2	       2
+(x  - a x + 1) (x  + a x + 1)
+  2	       2
+(x  - a x + 1) (x  + a x + 1)
+
+"equal" 
+    2
+- (y  + x) (z - x) (z + x)
+    2
+- (y  + x) (z - x) (z + x)
+
+"equal" 
+         x + 2
+------------------------
+		   2
+(x + 3) (x + b) (x + c)
+         x + 2
+------------------------
+		   2
+(x + 3) (x + b) (x + c)
+
+"equal" 
+	 4	          3     2		          2
+(x + 2)//(x  + (2 c + b + 3) x  + (c  + (2 b + 6) c + 3 b) x
+
+					       2		       2
+				     + ((b + 3) c  + 6 b c) x + 3 b c )
+	 4	          3     2		          2
+(x + 2)//(x  + (2 c + b + 3) x  + (c  + (2 b + 6) c + 3 b) x
+
+					       2		       2
+				     + ((b + 3) c  + 6 b c) x + 3 b c )
+
+"equal" 
+    2		     4		  3     2		   2
+- (c  - 4 c - b + 6)//((c  + (- 2 b - 6) c  + (b  + 12 b + 9) c
+
+         2	      2			    c - 2
+ + (- 6 b  - 18 b) c + 9 b ) (x + c)) - ---------------------------------
+				  2			  2
+				(c  + (- b - 3) c + 3 b) (x + c)
+
+		     b - 2
+ + -------------------------------------------------
+	   2	       2	     3	  2
+   ((b - 3) c  + (6 b - 2 b ) c + b  - 3 b ) (x + b)
+
+		     1
+ - ----------------------------------------------
+	   2
+   ((b - 3) c  + (18 - 6 b) c + 9 b - 27) (x + 3)
+     2		       4		      3	  2	       2
+(- (c  - 4 c - b + 6))//((c  + ((- 2) b - 6) c  + (b  + 12 b + 9) c
+
+	 2	        2			      c - 2
+ + ((- 6) b  - 18 b) c + 9 b ) (x + c)) - ---------------------------------
+				    2			    2
+				  (c  + (- b - 3) c + 3 b) (x + c)
+
+		       b - 2
+ + -----------------------------------------------------
+	   2	       2	     3	      2
+   ((b - 3) c  + (6 b - 2 b ) c + b  + (- 3) b ) (x + b)
+
+		    - 1
+ + ----------------------------------------------
+	   2
+   ((b - 3) c  + (18 - 6 b) c + 9 b - 27) (x + 3)
+
+"not equal #######################################################" 
+       2
+      c  - 4 c - b + 6	         c - 2
+- ------------------------- - ------------------------
+         2        2				   2
+  (c - 3)  (c - b)  (x + c)   (c - 3) (c - b) (x + c)
+
+			       b - 2		      1
+		      + ------------------------ - ------------------------
+				   2		          2
+		        (b - 3) (c - b)  (x + b)   (b - 3) (c - 3)  (x + 3)
+       2
+      c  - 4 c - b + 6	         c - 2
+- ------------------------- - ------------------------
+         2        2				   2
+  (c - 3)  (c - b)  (x + c)   (c - 3) (c - b) (x + c)
+
+			       b - 2		      1
+		      + ------------------------ - ------------------------
+				   2		          2
+		        (b - 3) (c - b)  (x + b)   (b - 3) (c - 3)  (x + 3)
+
+"equal" 
+ 4    3	 2
+x  + x  + x  + x + 1
+ 4    3	 2
+x  + x  + x  + x + 1
+
+"equal" 
+ 4    3	 2
+a  + a  + a  + a + 1
+ 4    3	 2
+a  + a  + a  + a + 1
+
+"equal" 
+	    2	   3	  3    2
+(x - a) (x - a ) (x - a ) (x + a  + a  + a + 1)
+	    2	   3	  3    2
+(x - a) (x - a ) (x - a ) (x + a  + a  + a + 1)
+
+"equal" 
+  4	 8    4
+(x  + 1) (x  - x  + 1)
+  4	 8    4
+(x  + 1) (x  - x  + 1)
+
+"equal" 
+	2	   6    3	       10	   9    8	   7    6	   5    4	   3    2
+(x + 1) (x  - x + 1) (x  - x  + 1) (x   - x  + x  - x  + x  - x  + x  - x  + x
+
+	  20    19    17    16    14	  13    11    10    9    7    6    4
+ - x + 1) (x   + x   - x   - x   + x   + x   - x   - x   - x  + x  + x  - x
+
+    3	       60	   57    51    48	 42    39	   33    30    27	 21    18
+ - x  + x + 1) (x   + x   - x	  - x   + x   + x   - x   - x	  - x   + x   + x
+
+    12    9    3
+ - x   - x  + x  + 1)
+	2	   6    3	       10	   9    8	   7    6	   5    4	   3    2
+(x + 1) (x  - x + 1) (x  - x  + 1) (x   - x  + x  - x  + x  - x  + x  - x  + x
+
+	  20    19    17    16    14	  13    11    10    9    7    6    4
+ - x + 1) (x   + x   - x   - x   + x   + x   - x   - x   - x  + x  + x  - x
+
+    3	       60	   57    51    48	 42    39	   33    30    27	 21    18
+ - x  + x + 1) (x   + x   - x	  - x   + x   + x   - x   - x	  - x   + x   + x
+
+    12    9    3
+ - x   - x  + x  + 1)
+
+"equal" 
+     2	  2			 2      2		     2	    2
+a x z  + a z  + 2 a w x z + 2 a w z + a w  x + v  x + 2 u v x + u  x + a w
+
+						     2	        2
+						  + v  + 2 u v + u
+     2	  2			 2      2		     2	    2
+a x z  + a z  + 2 a w x z + 2 a w z + a w  x + v  x + 2 u v x + u  x + a w
+
+						     2	        2
+						  + v  + 2 u v + u
+
+"equal" 
+	        2	         2
+(x + 1) (a (z + w)  + (v + u) )
+	        2	         2
+(x + 1) (a (z + w)  + (v + u) )
+
+"equal" 
+         2   2
+(2 x + 1)  (x  - 1)
+         2   2
+(2 x + 1)  (x  - 1)
+
+"equal" 
+(x - 1) (x + 1) (x - %i) (x + %i)
+(x - 1) (x + 1) (x - %i) (x + %i)
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 9869 ms.
+(d1) 			       done
+
+(c1) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest5.mac");
+done
+done
+
+"equal" 
+[2 a, x f(x)]
+[2 a, x f(x)]
+
+"equal" 
+[b + a, 0]
+[b + a, 0]
+
+"equal" 
+2 (2 a log(y) + a log(x))
+2 (2 a log(y) + a log(x))
+
+"equal" 
+       2  4
+a log(x  y )
+       2  4
+a log(x  y )
+
+"equal" 
+0
+0
+
+"equal" 
+false
+false
+
+"equal" 
+        3
+sqrt(x y )
+        3
+sqrt(x y )
+
+"equal" 
+         1//4
+sqrt(x) y
+         1//4
+sqrt(x) y
+
+"equal" 
+true
+true
+
+"equal" 
+sqrt(x sqrt(y))
+sqrt(x sqrt(y))
+
+"not equal #######################################################" 
+         1//3
+sqrt(x) y
+         1//3
+sqrt(x) y
+
+"equal" 
+all
+all
+
+"equal" 
+  2   1//4
+(x  y)
+  2   1//4
+(x  y)
+
+"not equal #######################################################" 
+  3  2 1//6
+(x  y )
+  3  2 1//6
+(x  y )
+
+"not equal #######################################################" 
+false
+false
+
+"equal" 
+1
+1
+
+"equal" 
+true
+true
+
+"equal" 
+0
+0
+
+"equal" 
+done
+done
+
+"equal" 
+	  2
+cos(x) + 3 x  + 4 x
+	  2
+cos(x) + 3 x  + 4 x
+
+"equal" 
+   2	   2
+cos (x) - sin (x)
+   2	   2
+cos (x) - sin (x)
+
+"equal" 
+- 4 cos(x) sin(x)
+(- 4) cos(x) sin(x)
+
+"equal" 
+true
+true
+
+"equal" 
+  f(x)	         f(x)	 2
+%e     f(x)    + %e	    (f(x) )
+	 x x	         x
+  f(x)	         f(x)	 2
+%e     f(x)    + %e	    (f(x) )
+	 x x	         x
+
+"equal" 
+ h(x)
+/
+[
+I     f(x, y) dy
+]
+/
+ g(x)
+ h(x)
+/
+[
+I     f(x, y) dy
+]
+/
+ g(x)
+
+"equal" 
+ h(x)
+/
+[
+I     f(x, y)  dy + f(x, h(x)) h(x)  - f(x, g(x)) g(x)
+]	   x		     x		    x
+/
+ g(x)
+ h(x)
+/
+[
+I     f(x, y)  dy + f(x, h(x)) h(x)  + (- f(x, g(x))) g(x)
+]	   x		     x		        x
+/
+ g(x)
+
+"equal" 
+done
+done
+
+"equal" 
+[a(x)]
+[a(x)]
+
+"equal" 
+a  . a + a . a
+ x	    x
+a  . a + a . a
+ x	    x
+
+"equal" 
+[f(x, y), x(t), y(t)]
+[f(x, y), x(t), y(t)]
+
+"equal" 
+f  y  + f  x
+ y  t    x  t
+f  y  + f  x
+ y  t    x  t
+
+"equal" 
+[y(x)]
+[y(x)]
+
+"equal" 
+done
+done
+
+"equal" 
+f(x, y)
+f(x, y)
+
+"equal" 
+	    2
+g(x, y) y  + x
+         x
+	    2
+g(x, y) y  + x
+         x
+
+"equal" 
+j(n, z)
+j(n, z)
+
+"equal" 
+         2
+j(0, x) x  - 3 j(1, x) x + 6 j(2, x)
+------------------------------------
+	        2
+	       x
+         2
+j(0, x) x  - 3 j(1, x) x + 6 j(2, x)
+------------------------------------
+	        2
+	       x
+
+"equal" 
+test(f) := block([u], u : integrate(f, x), ratsimp(f - diff(u, x)))
+test(f) := block([u], u : integrate(f, x), ratsimp(f - diff(u, x)))
+
+"equal" 
+0
+0
+
+"equal" 
+0
+0
+
+"equal" 
+0
+0
+
+"equal" 
+   3
+cos (x)
+------- - cos(x)
+   3
+   3
+cos (x)
+------- - cos(x)
+   3
+
+"equal" 
+done
+done
+
+"equal" 
+      x
+log(%e  + 2)
+      x
+log(%e  + 2)
+
+"equal" 
+log(log(x))
+log(log(x))
+
+"equal" 
+  cos(2 x + 3)
+- ------------
+       2
+- cos(2 x + 3)
+--------------
+      2
+
+"equal" 
+  x	     1//4	        1
+%e  erf(x) - %e     erf(x - -)
+		        2
+  x	     1//4	        1
+%e  erf(x) - %e     erf(x - -)
+		        2
+
+"not equal #######################################################" 
+		   2 x - 1
+     2	        atan(-------)
+log(x  - x + 1)	   sqrt(3)    log(x + 1)
+--------------- + ------------- - ----------
+       6		 sqrt(3)	        3
+		   2 x - 1
+     2	        atan(-------)
+log(x  - x + 1)	   sqrt(3)    - log(x + 1)
+--------------- + ------------- + ------------
+       6		 sqrt(3)	         3
+
+"equal" 
+        2		    2 x - 1	  1
+------------------ + -------------- - ---------
+	  2	     2	        3 (x + 1)
+   (2 x - 1)	 6 (x  - x + 1)
+3 (---------- + 1)
+       3
+        2		    2 x - 1	 - 1
+------------------ + -------------- + ---------
+	  2	     2	        3 (x + 1)
+   (2 x - 1)	 6 (x  - x + 1)
+3 (---------- + 1)
+       3
+
+"equal" 
+  x
+------
+ 3
+x  + 1
+  x
+------
+ 3
+x  + 1
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 2472 ms.
+(d1) 			       done
+
+(c1) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest6.mac");
+     9  1
+beta(-, -)
+     4  4
+     9  1
+beta(-, -)
+     4  4
+
+"equal" 
+q(x)
+q(x)
+
+"equal" 
+ d	       2
+(-- (r(x))) sin(r (x))
+ dx
+----------------------
+       q(r(x))
+ d	       2
+(-- (r(x))) sin(r (x))
+ dx
+----------------------
+       q(r(x))
+
+"equal" 
+log(q(r(x)))
+log(q(r(x)))
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 759 ms.
+(d1) 			       done
+
+(c2) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest6a.mac");
+done
+done
+
+"equal" 
+				        2
+     3		        2		     - x
+%pi x  erf(x) + (sqrt(%pi) x  + sqrt(%pi)) %e
+-------------------------------------------------
+		  3 %pi
+				        2
+     3		        2		     - x
+%pi x  erf(x) + (sqrt(%pi) x  + sqrt(%pi)) %e
+-------------------------------------------------
+		  3 %pi
+
+"equal" 
+ 2
+x  erf(x)
+ 2
+x  erf(x)
+
+"equal" 
+[a > 0]
+[a > 0]
+
+"equal" 
+ 4
+/
+[    sqrt(a) sqrt(y)
+I  %e	           dy
+]
+/
+ 0
+ 4
+/
+[    sqrt(a) sqrt(y)
+I  %e	           dy
+]
+/
+ 0
+
+"equal" 
+     0
+    /
+    [		 abs(z)
+  2 I	       z %e       dz
+    ]
+    /
+     - 2 sqrt(a)
+- ----------------------------
+	     a
+   0
+  /		   abs(z)
+  [	       2 z %e
+- I	       ------------ dz
+  ]		  a
+  /
+   (- 2) sqrt(a)
+
+"equal" 
+[p > 0]
+[p > 0]
+
+"equal" 
+	        a t
+	- p t - ---
+	         4
+sqrt(t) %e
+		a t
+	(- p) t - ---
+		 4
+sqrt(t) %e
+
+"equal" 
+			   - p t
+%j (2 sqrt(a) sqrt(t)) sqrt(t) %e
+  1
+			   - p t
+%j (2 sqrt(a) sqrt(t)) sqrt(t) %e
+  1
+
+"equal" 
+[p > 0, a > 0]
+[p > 0, a > 0]
+
+"equal" 
+y
+-- + x
+ 2
+z
+y
+-- + x
+ 2
+z
+
+"equal" 
+2
+2
+
+"equal" 
+[false]
+[false]
+
+"equal" 
+ b
+/
+[
+I  f(x) dx + x
+]
+/
+ a
+ b
+/
+[
+I  f(x) dx + x
+]
+/
+ a
+
+"equal" 
+f(x)
+f(x)
+
+"equal" 
+ 2	  2
+x  + 2 x = y
+ 2	  2
+x  + 2 x = y
+
+"equal" 
+ 2	      2
+x  + 2 x + 1 = y  + 1
+ 2	      2
+x  + 2 x + 1 = y  + 1
+
+"equal" 
+ 2
+x  + 2 x + 1
+ 2
+x  + 2 x + 1
+
+"equal" 
+ 2
+y  + 1
+ 2
+y  + 1
+
+"equal" 
+ 2
+y
+ 2
+y
+
+"equal" 
+    3	    2	  2	     3
+27 y  + 54 x y  + 36 x  y + y + 8 x  + x + 1
+    3	    2	  2	     3
+27 y  + 54 x y  + 36 x  y + y + 8 x  + x + 1
+
+"equal" 
+    2
+54 y
+    2
+54 y
+
+"equal" 
+abs(y)
+abs(y)
+
+"equal" 
+w z + y + x
+w z + y + x
+
+"equal" 
+z
+z
+
+"equal" 
+	  g(x + 1)
+limit   f(x)
+x -> 0-
+	  g(x + 1)
+limit   f(x)
+x -> 0-
+
+"equal" 
+g(x + 1)
+g(x + 1)
+
+"equal" 
+	  g(x + 1)
+limit   f(x)
+x -> 0-
+	  g(x + 1)
+limit   f(x)
+x -> 0-
+
+"equal" 
+true
+true
+
+"equal" 
+ y
+---- + x
+   2
+"""
+"z"
+"""
+ y
+---- + x
+   2
+"""
+"z"
+"""
+
+"equal" 
+ 4        3      2  2      3	    4
+b  + 4 a b  + 6 a  b  + 4 a  b + a
+ 4        3      2  2      3	    4
+b  + 4 a b  + 6 a  b  + 4 a  b + a
+
+"equal" 
+       2	      2
+(b + a)  (y + x)
+       2	      2
+(b + a)  (y + x)
+
+"equal" 
+ 2  2	     2    2  2      2		   2	  2  2	      2
+b  y  + 2 a b y  + a  y  + 2 b  x y + 4 a b x y + 2 a  x y + b  x  + 2 a b x
+
+							     2  2
+							  + a  x
+ 2  2	     2    2  2      2		   2	  2  2	      2
+b  y  + 2 a b y  + a  y  + 2 b  x y + 4 a b x y + 2 a  x y + b  x  + 2 a b x
+
+							     2  2
+							  + a  x
+
+"equal" 
+  4	 3      2	 2      3	     4	 2  2	     2    2  2      2
+(b  + 4 a b  + 6 a  b  + 4 a  b + a )//(b  y  + 2 a b y  + a  y  + 2 b  x y
+
+				      2	     2  2	         2    2  2
+		         + 4 a b x y + 2 a  x y + b  x  + 2 a b x  + a  x )
+  4	 3      2	 2      3	     4	 2  2	     2    2  2      2
+(b  + 4 a b  + 6 a  b  + 4 a  b + a )//(b  y  + 2 a b y  + a  y  + 2 b  x y
+
+				      2	     2  2	         2    2  2
+		         + 4 a b x y + 2 a  x y + b  x  + 2 a b x  + a  x )
+
+"equal" 
+       2
+(b + a)
+--------
+       2
+(y + x)
+       2
+(b + a)
+--------
+       2
+(y + x)
+
+"equal" 
+						       """"""""""
+  4	 3      2	 2      3	     4	 2  2	     2    2  2   "	 2    "
+(b  + 4 a b  + 6 a  b  + 4 a  b + a )//(b  y  + 2 a b y  + a  y  + "2 b  x y"
+						       """"""""""
+
+				      2	     2  2	         2    2  2
+		         + 4 a b x y + 2 a  x y + b  x  + 2 a b x  + a  x )
+						       """"""""""
+  4	 3      2	 2      3	     4	 2  2	     2    2  2   "	 2    "
+(b  + 4 a b  + 6 a  b  + 4 a  b + a )//(b  y  + 2 a b y  + a  y  + "2 b  x y"
+						       """"""""""
+
+				      2	     2  2	         2    2  2
+		         + 4 a b x y + 2 a  x y + b  x  + 2 a b x  + a  x )
+
+"equal" 
+   2
+2 b  x y
+   2
+2 b  x y
+
+"equal" 
+         2
+y + x + a
+         2
+y + x + a
+
+"equal" 
+a - %i b
+a - %i b
+
+"equal" 
+2 x
+2 x
+
+"equal" 
+1
+1
+
+"equal" 
+Non-variable 2nd argument to diff: 0
+[]
+[]
+
+"equal" 
+[not equal(i, - 1)]
+[not equal(i, - 1)]
+
+"equal" 
+log(x)
+log(x)
+
+"equal" Division by 0
+[]
+[]
+
+"equal" 
+[ a  b ]
+[      ]
+[ c  d ]
+matrix([a, b], [c, d])
+
+"equal" 
+[[a, b], [c, d]]
+[[a, b], [c, d]]
+
+"equal" 
+   3      4
+a x  y + a
+   3      4
+a x  y + a
+
+"equal" 
+   4	   3	   2
+cos (x) + cos (x) + cos (x) + cos(x) + 1
+   4	   3	   2
+cos (x) + cos (x) + cos (x) + cos(x) + 1
+
+"equal" 
+   4	     2		       2
+sin (x) - 3 sin (x) + cos(x) (2 - sin (x)) + 3
+   4	     2		       2
+sin (x) - 3 sin (x) + cos(x) (2 - sin (x)) + 3
+
+"equal" 
+   4	     2
+cos (x) - 2 cos (x) + 1
+   4	     2
+cos (x) - 2 cos (x) + 1
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 2956 ms.
+(d1) 			       done
+
+(c1) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest6b.mac");
+  1
+------
+ 2
+x  + 2
+  1
+------
+ 2
+x  + 2
+
+"equal" 
+    1
+---------
+ 3//2
+x     + 2
+    1
+---------
+ 3//2
+x     + 2
+
+"equal" 
+    3	    2	  2	     3
+27 y  + 54 x y  + 36 x  y + y + 8 x  + x + 1
+    3	    2	  2	     3
+27 y  + 54 x y  + 36 x  y + y + 8 x  + x + 1
+
+"equal" 
+	 3
+(3 y + 2 x)  + y + x + 1
+	 3
+(3 y + 2 x)  + y + x + 1
+
+"equal" 
+  1   y   1
+- - + - + -
+  z   x   x
+- 1   y   1
+--- + - + -
+ z    x   x
+
+"equal" 
+y + 1   1
+----- - -
+  x     z
+y + 1   1
+----- - -
+  x     z
+
+"equal" 
+  1
+- - + y + x + 1
+  z
+- 1
+--- + y + x + 1
+ z
+
+"equal" 
+  2  2		      2  2
+(k  x  - 1) cos(x) + eps k  x  - eps
+------------------------------------
+      2
+  15 k  + (5 n  - 3 n ) k - n  n
+	    1	 2       1  2
+  2  2		      2  2
+(k  x  - 1) cos(x) + eps k  x  - eps
+------------------------------------
+    2
+15 k  + (5 n  - 3 n ) k + (- n ) n
+	  1      2          1   2
+
+"equal" 
+(k x - 1) (k x + 1) (cos(x) + eps)
+----------------------------------
+      (3 k + n ) (5 k - n )
+	    1	     2
+(k x - 1) (k x + 1) (cos(x) + eps)
+----------------------------------
+      (3 k + n ) (5 k - n )
+	    1	     2
+
+"equal" 
+  2  2
+(k  x  - 1) (cos(x) + eps)
+--------------------------
+  (3 k + n ) (5 k - n )
+	1	 2
+  2  2
+(k  x  - 1) (cos(x) + eps)
+--------------------------
+  (3 k + n ) (5 k - n )
+	1	 2
+
+"equal" 
+        2	 2
+  (1 - k  x ) (cos(x) + eps)
+- --------------------------
+    (3 k + n ) (5 k - n )
+	  1	   2
+         2  2
+(- (1 - k  x )) (cos(x) + eps)
+------------------------------
+    (3 k + n ) (5 k - n )
+	  1	   2
+
+"not equal #######################################################" 
+	b
+--------------------- + a
+x (y + (b + a) x) + 1
+	b
+--------------------- + a
+x (y + (b + a) x) + 1
+
+"equal" 
+         b
+-------------------- + a
+	     2
+x y + (b + a) x  + 1
+         b
+-------------------- + a
+	     2
+x y + (b + a) x  + 1
+
+"equal" 
+     2
+    d
+x . --- (f(x))
+      2
+    dx
+     2
+    d
+x . --- (f(x))
+      2
+    dx
+
+"equal" 
+     2
+x . d
+     2
+x . d
+
+"equal" 
+f1(x + 1)
+f1(x + 1)
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 1033 ms.
+(d1) 			       done
+
+(c2) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest7.mac");
+done
+done
+
+"equal" 
+ 2
+a
+ 2
+a
+
+"equal" 
+@2 + 1
+@2 + 1
+
+"equal" 
+			 f(0, @2) = @2 + 1
+
+				    2
+			   f(0, 1) = a
+
+done
+done
+
+"equal" 
+	 d		        d
+8 f(x, y) (-- (f(x, y))) - 2 u(x, y) (-- (u(x, y)))
+	 dx		        dx
+	 d		        d
+8 f(x, y) (-- (f(x, y))) - 2 u(x, y) (-- (u(x, y)))
+	 dx		        dx
+
+"equal" 
+			 !
+    2	         d	 !
+16 a  - 2 u(0, 1) (-- (u(x, y))!	    )
+	         dx	 !
+			 !x = 0, y = 1
+    2		 d
+16 a  - 2 u(0, 1) at(-- (u(x, y)), [x = 0, y = 1])
+		 dx
+
+"equal" 
+ 2
+a
+ 2
+a
+
+"equal" 
+@2 + 1
+@2 + 1
+
+"equal" 
+			 f(0, @2) = @2 + 1
+
+				    2
+			   f(0, 1) = a
+
+done
+done
+
+"equal" 
+	 d		        d
+8 f(x, y) (-- (f(x, y))) - 2 u(x, y) (-- (u(x, y)))
+	 dx		        dx
+	 d		        d
+8 f(x, y) (-- (f(x, y))) - 2 u(x, y) (-- (u(x, y)))
+	 dx		        dx
+
+"equal" 
+			 !
+    2	         d	 !
+16 a  - 2 u(0, 1) (-- (u(x, y))!	    )
+	         dx	 !
+			 !x = 0, y = 1
+    2		 d
+16 a  - 2 u(0, 1) at(-- (u(x, y)), [x = 0, y = 1])
+		 dx
+
+"equal" 
+[g, a, x , y]
+        1
+[g, a, x , y]
+        1
+
+"equal" 
+2 a + 1 = 5
+2 a + 1 = 5
+
+"equal" 
+y + 1
+y + 1
+
+"equal" 
+b x + a x + 5
+b x + a x + 5
+
+"equal" 
+x
+x
+
+"equal" 
+islinear(exp, var) := block([c], c : bothcoef(rat(exp, var), var), 
+
+				         is(freeof(var, c) and c  # 0))
+							  1
+islinear(exp, var) := block([c], c : bothcoef(rat(exp, var), var), 
+
+				         is(freeof(var, c) and c  # 0))
+							  1
+
+"equal" 
+true
+true
+
+"equal" 
+       4		      2
+(b + a)  (x (2 x + (d + c) ) + 1)
+       4		      2
+(b + a)  (x (2 x + (d + c) ) + 1)
+
+"equal" 
+				  2
+(e1) 			     (d + c)
+
+
+				  4
+(e2) 			     (b + a)
+
+e2 (x (2 x + e1) + 1)
+e2 (x (2 x + e1) + 1)
+
+"equal" 
+      2
+2 e2 x  + e1 e2 x + e2
+      2
+2 e2 x  + e1 e2 x + e2
+
+"equal" 
+         4  2	   4	  2	     4
+2 (b + a)  x  + (b + a)  (d + c)  x + (b + a)
+         4  2	   4	  2	     4
+2 (b + a)  x  + (b + a)  (d + c)  x + (b + a)
+
+"equal" 
+		    2
+	         2   x  + a x + b
+(b + a) (x + b + a)  %e
+		    2
+	         2   x  + a x + b
+(b + a) (x + b + a)  %e
+
+"equal" 
+(e3) 			       b + a
+
+
+				b
+(e4) 			        %e
+
+	         2
+	    2   x  + a x
+e3 e4 (x + e3)  %e
+	         2
+	    2   x  + a x
+e3 e4 (x + e3)  %e
+
+"equal" 
+				   1//3
+			      2 x - 2
+			atan(-------------)
+       2	  1//3	  2//3	      1//3		 1//3
+  log(x  - 2     x + 2    )	     2     sqrt(3)	  log(x + 2    )
+- ------------------------- + ------------------- + --------------
+	    2//3		    2//3		        2//3
+	 6 2		   2     sqrt(3)	     3 2
+				   1//3
+			      2 x - 2
+			atan(-------------)
+       2	  1//3	  2//3	      1//3		 1//3
+- log(x  - 2     x + 2    )	     2     sqrt(3)	  log(x + 2    )
+--------------------------- + ------------------- + --------------
+	   2//3		    2//3		        2//3
+	6 2		   2     sqrt(3)	     3 2
+
+"equal" 
+  1
+------
+ 3
+x  + 2
+  1
+------
+ 3
+x  + 2
+
+"equal" 
+			   2    1//3      2//3
+		        log(x  - 2	   x + 2	  )
+(e5) 		      - -------------------------
+				2//3
+			       6 2
+
+
+				   1//3
+			      2 x - 2
+			atan(-------------)
+			      1//3
+			     2     sqrt(3)
+(e6) 		          -------------------
+			    2//3
+			   2     sqrt(3)
+
+
+				 1//3
+			  log(x + 2    )
+(e7) 			  --------------
+			        2//3
+			     3 2
+
+e7 + e6 + e5
+e7 + e6 + e5
+
+"equal" 
+15 sqrt(%pi)
+------------
+     8
+15 sqrt(%pi)
+------------
+     8
+
+"equal" 
+15
+--
+8
+15
+--
+8
+
+"equal" 
+   3     2
+  d y   d y    2 dy
+2 --- + --- + x  --
+    3     2      dx
+  dz    dx
+   3     2
+  d y   d y    2 dy
+2 --- + --- + x  --
+    3     2      dx
+  dz    dx
+
+"equal" 
+2
+2
+
+"equal" 
+%i v + u	   %i alpha
+-------- + %e
+f + %i e
+%i v + u	   %i alpha
+-------- + %e
+f + %i e
+
+"equal" 
+e v + f u
+--------- + cos(alpha)
+  2    2
+ f  + e
+e v + f u
+--------- + cos(alpha)
+  2    2
+ f  + e
+
+"equal" 
+cosh(2) sin(x) + %i sinh(2) cos(x)
+cosh(2) sin(x) + %i sinh(2) cos(x)
+
+"equal" 
+         2       2	        2	      2
+sqrt(cosh (2) sin (x) + sinh (2) cos (x))
+
+			         %i atan2(sinh(2) cos(x), cosh(2) sin(x))
+			       %e
+         2       2	        2	      2
+sqrt(cosh (2) sin (x) + sinh (2) cos (x))
+
+			         %i atan2(sinh(2) cos(x), cosh(2) sin(x))
+			       %e
+
+"equal" 
+	       4
+log(5) + %i atan(-)
+	       3
+	       4
+log(5) + %i atan(-)
+	       3
+
+"equal" 
+			     atan(4//3)
+		       %i atan(----------)
+        2	         2 4	       log(5)
+sqrt(log (5) + atan (-)) %e
+		 3
+			     atan(4//3)
+		       %i atan(----------)
+        2	         2 4	       log(5)
+sqrt(log (5) + atan (-)) %e
+		 3
+
+"equal" 
+0.36825879 %i + 1.3682663
+0.36825879 %i + 1.3682663
+
+"not equal #######################################################" 
+	 0.26291255 %i
+1.416957 %e
+	 0.26291255 %i
+1.416957 %e
+
+"not equal #######################################################" 
+y + x
+y + x
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 2474 ms.
+(d1) 			       done
+
+(c2) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest8.mac");
+done
+done
+
+"equal" 
+ 10      4   1
+x   - 2 x  + -
+	   2
+ 10      4   1
+x   - 2 x  + -
+	   2
+
+"equal" 
+4
+4
+
+"equal" 
+     612003
+[x = ------]
+     524288
+     612003
+[x = ------]
+     524288
+
+"equal" 
+x = 1.1673031
+x = 1.1673031
+
+"equal" 
+- 7.4505806e-06
+- 7.3964962e-06
+
+"not equal #######################################################" 
+         3          5
+(2 x + 1)  = 13.5 (x  + 1)
+         3          5
+(2 x + 1)  = 13.5 (x  + 1)
+
+"equal" 
+[x = 0.829675, x = - 1.0157557, x = 0.96596263 %i - 0.4069597, 
+
+			        x = - 0.96596263 %i - 0.4069597, x = 1.0]
+[x = 0.82967499, x = - 1.0157555, x = 0.96596251 %i - 0.40695972, 
+
+			     x = (- 0.96596251) %i - 0.40695972, x = 1.0]
+
+"not equal #######################################################" 
+z + x = y
+z + x = y
+
+"equal" 
+	     2
+2 a x - y = 2 a
+	     2
+2 a x - y = 2 a
+
+"equal" 
+y - 2 z = 2
+y - 2 z = 2
+
+"equal" 
+[x = a + 1, y = 2 a, z = a - 1]
+[x = a + 1, y = 2 a, z = a - 1]
+
+"equal" 
+2 (1 - l1) x - 2 l2 (x - 1)
+2 (1 - l1) x - 2 l2 (x - 1)
+
+"equal" 
+l2 - l1
+l2 - l1
+
+"equal" 
+	 2
+l1 (- y - x  + 1)
+	 2
+l1 (- y - x  + 1)
+
+"equal" 
+	     2
+l2 (y - (x - 1) )
+	     2
+l2 (y - (x - 1) )
+
+"equal" 
+[[x = 0, y = %r1, l1 = 0, l2 = 0], [x = 1, y = 0, l1 = 1, l2 = 1]]
+[[x = 0, y = %r1, l1 = 0, l2 = 0], [x = 1, y = 0, l1 = 1, l2 = 1]]
+
+"equal" 
+ 2    2
+x  - y
+ 2    2
+x  - y
+
+"equal" 
+   2	  2
+2 y  - y + x  - x - 1
+   2	  2
+2 y  - y + x  - x - 1
+
+"equal" 
+	 1	    1			     1	          1
+[[x = - -------, y = -------], [x = 1, y = 1], [x = -------, y = - -------], 
+        sqrt(3)	 sqrt(3)			  sqrt(3)	       sqrt(3)
+
+						       1	      1
+						[x = - -, y = - -]]
+						       3	      3
+        - 1	  1	       1	         - 1	  - 1	 - 1
+[[x = -------, y = -------], [x = -------, y = -------], [x = ---, y = ---], 
+      sqrt(3)      sqrt(3)	    sqrt(3)      sqrt(3)	   3	  3
+
+						    [x = 1, y = 1]]
+
+"not equal #######################################################" 
+Solve is using arc-trig functions to get a solution.
+Some solutions will be lost.
+     %pi
+[x = ---, f(x) = 1]
+      6
+     %pi
+[x = ---, f(x) = 1]
+      6
+
+"equal" 
+        log(125)
+[f(x) = --------]
+         log(5)
+        log(125)
+[f(x) = --------]
+         log(5)
+
+"equal" 
+    2    2
+[4 x  - y  = 12, x y - x = 2]
+    2    2
+[4 x  - y  = 12, x y - x = 2]
+
+"equal" 
+[[x = 0.5202581 %i - 0.13312338, y = 7.6783331e-02 - 3.6080136 %i], 
+
+[x = - 0.5202581 %i - 0.13312338, y = 3.6080135 %i + 7.6783343e-02], 
+
+[x = 2, y = 2]]
+[[x = 2, y = 2], [x = 0.52025944 %i - 0.13312403, 
+
+y = 7.6783786e-02 - 3.6080032 %i], [x = (- 0.52025944) %i - 0.13312403, 
+
+y = 3.6080032 %i + 7.6783786e-02], [x = - 1.7337519, y = - 0.15356757]]
+
+"not equal #######################################################" 
+			   3
+        sqrt(3) %i	 1   sqrt(4 a  + 27)   1 1//3
+[x = (- ---------- - -) (--------------- - -)
+	  2	 2      6 sqrt(3)	   2
+
+        sqrt(3) %i	 1
+       (---------- - -) a				  3
+	  2	 2	       sqrt(3) %i   1   sqrt(4 a  + 27)	  1 1//3
+ - ---------------------------, x = (---------- - -) (--------------- - -)
+	    3			 2        2      6 sqrt(3)	  2
+      sqrt(4 a  + 27)   1 1//3
+   3 (--------------- - -)
+         6 sqrt(3)	    2
+
+         sqrt(3) %i	  1
+      (- ---------- - -) a		     3
+	   2	  2	       sqrt(4 a  + 27)   1 1//3
+ - ---------------------------, x = (--------------- - -)
+	    3		          6 sqrt(3)	     2
+      sqrt(4 a  + 27)   1 1//3
+   3 (--------------- - -)
+         6 sqrt(3)	    2
+
+	      a
+ - ---------------------------]
+	    3
+      sqrt(4 a  + 27)   1 1//3
+   3 (--------------- - -)
+         6 sqrt(3)	    2
+			     3
+      (- sqrt(3)) %i   1   sqrt(4 a  + 27)   1 1//3
+[x = (-------------- - -) (--------------- - -)
+	  2	   2      6 sqrt(3)	     2
+
+        sqrt(3) %i	 1
+       (---------- - -) a				  3
+	  2	 2	       sqrt(3) %i   1   sqrt(4 a  + 27)	  1 1//3
+ - ---------------------------, x = (---------- - -) (--------------- - -)
+	    3			 2        2      6 sqrt(3)	  2
+      sqrt(4 a  + 27)   1 1//3
+   3 (--------------- - -)
+         6 sqrt(3)	    2
+
+      (- sqrt(3)) %i   1
+     (-------------- - -) a		     3
+	  2	   2	       sqrt(4 a  + 27)   1 1//3
+ - ---------------------------, x = (--------------- - -)
+	    3		          6 sqrt(3)	     2
+      sqrt(4 a  + 27)   1 1//3
+   3 (--------------- - -)
+         6 sqrt(3)	    2
+
+	      a
+ - ---------------------------]
+	    3
+      sqrt(4 a  + 27)   1 1//3
+   3 (--------------- - -)
+         6 sqrt(3)	    2
+
+"equal" 
+     sqrt(3) %i - 1	       sqrt(3) %i + 1
+[x = --------------, x = - --------------, x = 1]
+	 2		   2
+     sqrt(3) %i - 1	     - (sqrt(3) %i + 1)
+[x = --------------, x = ------------------, x = 1]
+	 2		   2
+
+"not equal #######################################################" 
+     sqrt(3) %i + 1	     sqrt(3) %i - 1		      sqrt(3) %i + 1
+[x = --------------, x = --------------, x = - 1, x = - --------------, 
+	 2		 2			  2
+
+					       sqrt(3) %i - 1
+					 x = - --------------, x = 1]
+						   2
+     sqrt(3) %i + 1	     sqrt(3) %i - 1		    - (sqrt(3) %i + 1)
+[x = --------------, x = --------------, x = - 1, x = ------------------, 
+	 2		 2			  2
+
+					   - (sqrt(3) %i - 1)
+				         x = ------------------, x = 1]
+						 2
+
+"not equal #######################################################" 
+	      6
+(sqrt(3) %i + 1)
+----------------- - 1
+       64
+	      6
+(sqrt(3) %i + 1)
+----------------- - 1
+       64
+
+"equal" 
+0
+0
+
+"equal" 
+ 2
+x  - 1
+ 2
+x  - 1
+
+"equal" 
+[x = - 1, x = 1]
+[x = - 1, x = 1]
+
+"equal" 
+0
+0
+
+"equal" 
+	   1
+h     := ---------
+ i, j    i + j - 1
+	   1
+h     := ---------
+ i, j    i + j - 1
+
+"equal" 
+[    1  1 ]
+[ 1  -  - ]
+[    2  3 ]
+[         ]
+[ 1  1  1 ]
+[ -  -  - ]
+[ 2  3  4 ]
+[         ]
+[ 1  1  1 ]
+[ -  -  - ]
+[ 3  4  5 ]
+	 1  1    1  1  1    1  1  1
+matrix([1, -, -], [-, -, -], [-, -, -])
+	 2  3    2  3  4    3  4  5
+
+"equal" 
+[2 x - (a - 1) y = 5 b, b y + a x + c = 0]
+[2 x - (a - 1) y = 5 b, b y + a x + c = 0]
+
+"equal" 
+[ 2  1 - a  - 5 b ]
+[ 	        ]
+[ a    b	    c   ]
+matrix([2, 1 - a, (- 5) b], [a, b, c])
+
+"equal" 
+[ 2  1 - a  - 5 b ]
+[ 	        ]
+[ a    b	    c   ]
+matrix([2, 1 - a, (- 5) b], [a, b, c])
+
+"equal" 
+[      a - 1       5 b     ]
+[ 1  - -----     - ---     ]
+[        2          2      ]
+[ 		       ]
+[	    2 c + 5 a b  ]
+[ 0     1	    ------------ ]
+[		 2     ]
+[	    2 b + a  - a ]
+	 - (a - 1)  (- 5) b	         2 c + 5 a b
+matrix([1, ---------, -------], [0, 1, ------------])
+	     2	     2		      2
+			         2 b + a  - a
+
+"not equal #######################################################" 
+[ 2  1 - a  - 5 b ]
+[ 	        ]
+[ a    b	    c   ]
+matrix([2, 1 - a, (- 5) b], [a, b, c])
+
+"equal" 
+[ 2     1 - a	  - 5 b	 ]
+[ 			 ]
+[	  2		 ]
+[ 0  2 b + a  - a  2 c + 5 a b ]
+			         2
+matrix([2, 1 - a, (- 5) b], [0, 2 b + a  - a, 2 c + 5 a b])
+
+"equal" 
+[ 2  1 - a  - 5 b ]
+[ 	        ]
+[ a    b	    c   ]
+matrix([2, 1 - a, (- 5) b], [a, b, c])
+
+"equal" 
+2
+2
+
+"equal" 
+[ 3  1 ]
+[      ]
+[ 2  4 ]
+matrix([3, 1], [2, 4])
+
+"equal" 
+      2
+lambda  - 7 lambda + 10
+      2
+lambda  - 7 lambda + 10
+
+"equal" 
+[lambda = 5, lambda = 2]
+[lambda = 5, lambda = 2]
+
+"equal" 
+[ x1 ]
+[    ]
+[ x2 ]
+matrix([x1], [x2])
+
+"equal" 
+[ x2 - 2 x1 ]
+[ 	  ]
+[ 2 x1 - x2 ]
+matrix([x2 - 2 x1], [2 x1 - x2])
+
+"equal" 
+x2 - 2 x1 = 0
+x2 - 2 x1 = 0
+
+"equal" 
+  2     2
+x2  + x1  = 1
+  2     2
+x2  + x1  = 1
+
+"equal" 
+	  1	        2		    1	        2
+[[x1 = - -------, x2 = - -------], [x1 = -------, x2 = -------]]
+         sqrt(5)	     sqrt(5)	 sqrt(5)	     sqrt(5)
+         - 1	   - 2	          1	    2
+[[x1 = -------, x2 = -------], [x1 = -------, x2 = -------]]
+       sqrt(5)	 sqrt(5)	       sqrt(5)	 sqrt(5)
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 7030 ms.
+(d1) 			       done
+
+(c1) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest9a.mac");
+done
+done
+
+"equal" 
+[f]
+[f]
+
+"equal" 
+         2         3          4
+        x	   3073 x	   12817 x
+1 + x + -- + ------- + -------- + . . .
+        2	    18432	    307200
+         2         3          4
+        x	   3073 x	   12817 x
+1 + x + -- + ------- + --------
+        2	    18432	    307200
+
+"equal" 
+inf
+====	  i1  2 i1	   2 i1
+\      (- 1)   2     bern(2 i1) x
+ >     ------------------------------
+/	       i1 (2 i1)!
+====
+i1 = 1
+-------------------------------------
+	        2
+inf
+====	  i1  2 i1	   2 i1
+\      (- 1)   2     bern(2 i1) x
+ >     ------------------------------
+/	       i1 (2 i1)!
+====
+i1 = 1
+-------------------------------------
+	        2
+
+"equal" 
+     2	       2
+- sin (x) + 3 cos (x) + x
+     2	       2
+- sin (x) + 3 cos (x) + x
+
+"equal" 
+cos(10 x) sin(y) + sin(10 x) cos(y)
+cos(10 x) sin(y) + sin(10 x) cos(y)
+
+"equal" 
+     2	       2
+- sin (x) + 3 cos (x) + x
+     2	       2
+- sin (x) + 3 cos (x) + x
+
+"equal" 
+2 cos(2 x) + x + 1
+2 cos(2 x) + x + 1
+
+"equal" 
+done
+done
+
+"equal" 
+cos(x)
+cos(x)
+
+"equal" 
+- cos(x)
+- cos(x)
+
+"equal" 
+	  2	     2	          2	   2
+   2   y + x        y + x	     y + x        y + x
+4 x  %e	      2 %e         4 x %e	    2 %e
+------------- + ---------- - ------------ + ----------
+    y + x	        y + x	        2		  3
+			 (y + x)	     (y + x)
+	  2	     2		    2	       2
+   2   y + x        y + x	         y + x	  y + x
+4 x  %e	      2 %e         (- 4) x %e	        2 %e
+------------- + ---------- + ---------------- + ----------
+    y + x	        y + x	          2	      3
+			   (y + x)         (y + x)
+
+"equal" 
+				  2	  y + %2	     1
+block([%1, %2, %3, %4], %1 : y + x, %2 : x , %3 : %e      , %4 : --, 
+						     %1
+
+						     4 x %3   2 %3
+				  4 %2 %4 %3 + 2 %4 %3 - ------ + ----)
+						        2	      3
+						      %1	    %1
+				  2	  y + %2	     1
+block([%1, %2, %3, %4], %1 : y + x, %2 : x , %3 : %e      , %4 : --, 
+						     %1
+
+						     4 x %3   2 %3
+				  4 %2 %4 %3 + 2 %4 %3 - ------ + ----)
+						        2	      3
+						      %1	    %1
+
+"not equal #######################################################" 
+   a
+ %e  (2 s - 4)
+---------------
+  2	    2
+(s  - 4 s + 5)
+   a
+ %e  (2 s - 4)
+---------------
+  2	    2
+(s  - 4 s + 5)
+
+"equal" 
+ t
+/
+[			       2
+I  f(t - x) sinh(a x) dx + b f(t) = t
+]
+/
+ 0
+ t
+/
+[			       2
+I  f(t - x) sinh(a x) dx + b f(t) = t
+]
+/
+ 0
+
+"equal" 
+		    a laplace(f(t), t, s)   2
+b laplace(f(t), t, s) + --------------------- = --
+			  2    2	         3
+			 s  - a	        s
+		    a laplace(f(t), t, s)   2
+b laplace(f(t), t, s) + --------------------- = --
+			  2    2	         3
+			 s  - a	        s
+
+"not equal #######################################################" 
+			2      2
+		       2 s  - 2 a
+[laplace(f(t), t, s) = --------------------]
+		      5	      2	  3
+		   b s  + (a - a  b) s
+			      2	   2
+			   2 s  - 2 a
+exp : [laplace(f(t), t, s) = --------------------]
+			  5	  2     3
+		         b s  + (a - a  b) s
+
+"not equal #######################################################" 
+End of file while scanning expression
+Batch spent 0.0 seconds in evaluation 
+
+(c1) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest9.mac");
+done
+done
+
+"equal" 
+- l m3 + l m2 . l m3 - l m2 + l m1 . l m3 - l m1 . l m2 . l m3 + l m1 . l m2
+
+						         - l m1 + 1
+- l m3 + l m2 . l m3 - l m2 + l m1 . l m3 + (- l m1) . (l m2 . l m3)
+
+					 + l m1 . l m2 + (- l) m1 + 1
+
+"equal" 
+	2		  2	       3		       2
+- l m3 + l  (m2 . m3) - l m2 + l  (m1 . m3) - l  (m1 . m2 . m3) + l  (m1 . m2)
+
+						         - l m1 + 1
+	  2		        2		      3
+(- l) m3 + l  (m2 . m3) + (- l) m2 + l  (m1 . m3) + (- l ) (m1 . (m2 . m3))
+
+					   2
+				          + l  (m1 . m2) + (- l) m1 + 1
+
+"equal" 
+	        3				   2
+- (m1 . m2 . m3) l  + (m2 . m3 + m1 . m3 + m1 . m2) l  + (- m3 - m2 - m1) l + 1
+		3			     2
+(- m1 . (m2 . m3)) l  + (m2 . m3 + m1 . m3 + m1 . m2) l  + (- m3 - m2 - m1) l
+
+							      + 1
+
+"not equal #######################################################" 
+ 2
+x
+ 2
+x
+
+"not equal #######################################################" 
+d      2
+-- (f(x ))
+dx
+d      2
+-- (f(x ))
+dx
+
+"equal" 
+		         4
+		(x - 2 y)
+(y + a) (2 y + x) (------------ + 1)
+		 2      2 2
+	         (x  - 4 y )
+------------------------------------
+	      2	 2
+	   4 y  + x
+		         4
+		(x - 2 y)
+(y + a) (2 y + x) (------------ + 1)
+		 2      2 2
+	         (x  - 4 y )
+------------------------------------
+	      2	 2
+	   4 y  + x
+
+"equal" 
+2 a + 2 y
+---------
+ x + 2 y
+2 a + 2 y
+---------
+ x + 2 y
+
+"not equal #######################################################" 
+       20
+(x + 3)
+       20
+(x + 3)
+
+"equal" 
+ 20       19	 18	   17	      16	          15	     14
+x   + 60 x   + 1710 x   + 30780 x   + 392445 x   + 3767472 x   + 28256040 x
+
+	    13	          12	       11		     10
+ + 169536240 x   + 826489170 x   + 3305956680 x   + 10909657044 x
+
+	      9		   8		 7	         6
+ + 29753610120 x  + 66945622770 x  + 123591918960 x  + 185387878440 x
+
+	       5		     4		   3	          2
+ + 222465454128 x  + 208561363245 x  + 147219785820 x  + 73609892910 x
+
+ + 23245229340 x + 3486784401
+ 20       19	 18	   17	      16	          15	     14
+x   + 60 x   + 1710 x   + 30780 x   + 392445 x   + 3767472 x   + 28256040 x
+
+	    13	          12	       11		     10
+ + 169536240 x   + 826489170 x   + 3305956680 x   + 10909657044 x
+
+	      9		   8		 7	         6
+ + 29753610120 x  + 66945622770 x  + 123591918960 x  + 185387878440 x
+
+	       5		     4		   3	          2
+ + 222465454128 x  + 208561363245 x  + 147219785820 x  + 73609892910 x
+
+ + 23245229340 x + 3486784401
+
+"not equal #######################################################" 
+    19	     18	       17	          16	    15	         14
+20 x   + 1140 x   + 30780 x   + 523260 x   + 6279120 x   + 56512080 x
+
+	    13		 12	        11	      10
+ + 395584560 x   + 2203971120 x   + 9917870040 x   + 36365523480 x
+
+	       9		     8		   7		 6
+ + 109096570440 x  + 267782491080 x  + 535564982160 x  + 865143432720 x
+
+	        5		       4		     3		   2
+ + 1112327270640 x  + 1112327270640 x  + 834245452980 x  + 441659357460 x
+
+ + 147219785820 x + 23245229340
+    19	     18	       17	          16	    15	         14
+20 x   + 1140 x   + 30780 x   + 523260 x   + 6279120 x   + 56512080 x
+
+	    13		 12	        11	      10
+ + 395584560 x   + 2203971120 x   + 9917870040 x   + 36365523480 x
+
+	       9		     8		   7		 6
+ + 109096570440 x  + 267782491080 x  + 535564982160 x  + 865143432720 x
+
+	        5		       4		     3		   2
+ + 1112327270640 x  + 1112327270640 x  + 834245452980 x  + 441659357460 x
+
+ + 147219785820 x + 23245229340
+
+"not equal #######################################################" 
+	19
+20 (x + 3)
+	19
+20 (x + 3)
+
+"equal" 
+[a, 1, b, 1]
+[a, 1, b, 1]
+
+"equal" 
+b + a + 1
+b + a + 1
+
+"not equal #######################################################" 
+ 2	          2
+b  + (2 a + 2) b + a  + 2 a + 1
+ 2	          2
+b  + (2 a + 2) b + a  + 2 a + 1
+
+"not equal #######################################################" 
+	 2
+(b + a + 1)
+2 b + 2 a + 1
+
+"not equal #######################################################" 
+         2
+1.0e-20 x  - 5.5 x + 5.2e+20
+         2
+1.0e-20 x  - 5.5 x + 5.2e+20
+
+"equal" 
+[- 3.0000003e+19]
+[7.0e+19]
+
+"not equal #######################################################" 
+(1.0e-20 x - 5.5) x + 5.2e+20
+(1.0e-20 x - 5.5) x + 5.2e+20
+
+"equal" 
+6.999999e+19
+7.0e+19
+
+"not equal #######################################################" 
+[1, 2 y]
+[1, 2 y]
+
+"equal" 
+[- 1, 2 x]
+[- 1, 2 x]
+
+"equal" 
+	 2
+[2 x, 2 x y  + y]
+	 2
+[2 x, 2 x y  + y]
+
+"equal" 
+ 4      3		   2    2
+y  + a y  + (2 b + 1) y  + b
+ 4      3		   2    2
+y  + a y  + (2 b + 1) y  + b
+
+"equal" 
+[  2	     2	 ]
+[ y  + b  - a y  - y ]
+[ 		 ]
+[	   2	 ]
+[   y	  y  + b	 ]
+         2	   2	      2
+matrix([y  + b, (- a) y  - y], [y, y  + b])
+
+"equal" 
+ 4      3	       2	  2    2
+y  + a y  + 2 b y  + y  + b
+ 4      3	       2	  2    2
+y  + a y  + 2 b y  + y  + b
+
+"equal" 
+0
+0
+
+"equal" 
+       2	      2	     2
+(b - a)  (c - a)  (c - b)
+       2	      2	     2
+(b - a)  (c - a)  (c - b)
+
+"equal" 
+   3
+4 x  + 10 x - 11
+----------------
+      5
+     x  + 5
+   3
+4 x  + 10 x - 11
+----------------
+      5
+     x  + 5
+
+"equal" 
+      2
+     x  + x - 1
+--------------------
+ 4    3	 2
+x  + x  + x  + x + 1
+      2
+     x  + x - 1
+--------------------
+ 4    3	 2
+x  + x  + x  + x + 1
+
+"equal" 
+     7	   5	 4       2
+  8 x  + 40 x  - 55 x  - 60 x  - 50
+- ---------------------------------
+	 10       5
+	x   + 10 x  + 25
+      7	    5	      4	        2
+- (8 x  + 40 x  + (- 55) x  + (- 60) x  - 50)
+---------------------------------------------
+	     10	    5
+	    x   + 10 x  + 25
+
+"not equal #######################################################" 
+10 (%i + 1)
+-----------
+      1//3
+%i + 3
+10 (%i + 1)
+-----------
+      1//3
+%i + 3
+
+"equal" 
+    2//3	    1//3		  2//3	  1//3
+(4 3     - 2 3     - 4) %i + 2 3     + 4 3     - 2
+    2//3	    1//3		  2//3	  1//3
+(4 3     - 2 3     - 4) %i + 2 3     + 4 3     - 2
+
+"equal" 
+  2
+[a  + a + 1]
+  2
+[a  + a + 1]
+
+"equal" 
+      1		    a
+------------- + -----------------
+sqrt(2) a - 1   sqrt(3) + sqrt(2)
+      1		    a
+------------- + -----------------
+sqrt(2) a - 1   sqrt(3) + sqrt(2)
+
+"equal" 
+(7 sqrt(3) - 10 sqrt(2) + 2) a - 2 sqrt(2) - 1
+----------------------------------------------
+		  7
+(7 sqrt(3) - 10 sqrt(2) + 2) a - 2 sqrt(2) - 1
+----------------------------------------------
+		  7
+
+"equal" 
+  2    2	 2
+[y  - x , a  + a + 1]
+  2    2	 2
+[y  - x , a  + a + 1]
+
+"equal" 
+1 + x + . . .
+1 + x
+
+"equal" 
+         2    3
+1 - x + x  - x  + . . .
+         2    3
+1 - x + x  - x
+
+"equal" 
+4 + (z - 2) + (y - 1) + x + . . .
+4 + (z - 2) + (y - 1) + x
+
+"equal" 
+1   z - 2	     1    z - 2		      1	 3 (z - 2)	       2
+- - ----- + (- -- + ----- + . . .) (y - 1) + (-- - --------- + . . .) (y - 1)
+4    16	     16	 32		      64	    256
+
+      1	 z - 2    1    3 (z - 2)
+ + (- -- + ----- + (-- - --------- + . . .) (y - 1)
+      16	  32      32      128
+
+       3	  3 (z - 2)	        2
+ + (- --- + --------- + . . .) (y - 1)  + . . .) x
+      256	     256
+
+    1    3 (z - 2)	     3    3 (z - 2)
+ + (-- - --------- + (- --- + --------- + . . .) (y - 1)
+    64	  256	    256	   256
+
+     3    15 (z - 2)	       2	         2
+ + (--- - ---------- + . . .) (y - 1)  + . . .) x
+    512	   2048
+
+       1	  z - 2	  1    5 (z - 2)
+ + (- --- + ----- + (--- - --------- + . . .) (y - 1)
+      256	   256	 256     1024
+
+       5	   15 (z - 2)	          2	  3
+ + (- ---- + ---------- + . . .) (y - 1)  + . . .) x  + . . .
+      2048      4096
+1   z - 2	   - 1   z - 2	       1	  3 (z - 2)         2
+- - ----- + (--- + -----) (y - 1) + (-- - ---------) (y - 1)
+4    16	   16     32	       64	     256
+
+    - 1   z - 2    1    3 (z - 2)	      - 3	  3 (z - 2)         2
+ + (--- + ----- + (-- - ---------) (y - 1) + (--- + ---------) (y - 1) ) x
+    16	 32      32      128	      256	     256
+
+    1    3 (z - 2)	  - 3   3 (z - 2)		 3    15 (z - 2)	     2
+ + (-- - --------- + (--- + ---------) (y - 1) + (--- - ----------) (y - 1) )
+    64	  256	  256	 256	          512      2048
+
+  2    - 1   z - 2	   1    5 (z - 2)	          - 5    15 (z - 2)	      2
+ x  + (--- + ----- + (--- - ---------) (y - 1) + (---- + ----------) (y - 1) )
+       256    256	  256     1024	          2048      4096
+
+  3
+ x
+
+"equal" 
+1 + z + y + x + . . .
+1 + z + y + x
+
+"equal" 
+         2    3		    2	 3
+1 - z + z  - z  + (- 1 + 2 z - 3 z  + 4 z  + . . .) y
+
+	       2	     3	       2		        2	      3	        3
+ + (1 - 3 z + 6 z  - 10 z  + . . .) y  + (- 1 + 4 z - 10 z  + 20 z  + . . .) y
+
+	         2      3		     2	   3
+ + (- 1 + 2 z - 3 z  + 4 z  + (2 - 6 z + 12 z  - 20 z  + . . .) y
+
+		 2       3	 2
+ + (- 3 + 12 z - 30 z  + 60 z  + . . .) y
+
+	         2        3	          3
+ + (4 - 20 z + 60 z  - 140 z  + . . .) y  + . . .) x
+
+	       2	     3		       2	     3
+ + (1 - 3 z + 6 z  - 10 z  + (- 3 + 12 z - 30 z  + 60 z  + . . .) y
+
+	         2        3	          2
+ + (6 - 30 z + 90 z  - 210 z  + . . .) y
+
+		   2	  3	    3	      2
+ + (- 10 + 60 z - 210 z  + 560 z  + . . .) y  + . . .) x
+
+		2       3		        2	       3
+ + (- 1 + 4 z - 10 z  + 20 z  + (4 - 20 z + 60 z  - 140 z  + . . .) y
+
+		   2	  3	    2
+ + (- 10 + 60 z - 210 z  + 560 z  + . . .) y
+
+		  2	  3	    3	      3
+ + (20 - 140 z + 560 z  - 1680 z  + . . .) y  + . . .) x  + . . .
+         2    3		        2	     3
+1 - z + z  - z  + (- 1 + 2 z + (- 3) z  + 4 z ) y
+
+	       2	         3   2		        2	      3   3
+ + (1 - 3 z + 6 z  + (- 10) z ) y  + (- 1 + 4 z + (- 10) z  + 20 z ) y
+
+		   2      3	         2	 3
+ + (- 1 + 2 z + (- 3) z  + 4 z  + (2 - 6 z + 12 z  + (- 20) z ) y
+
+		     2	   3   2		       2	          3   3
+ + (- 3 + 12 z + (- 30) z  + 60 z ) y  + (4 - 20 z + 60 z  + (- 140) z ) y ) x
+
+	       2	         3		     2	   3
+ + (1 - 3 z + 6 z  + (- 10) z  + (- 3 + 12 z + (- 30) z  + 60 z ) y
+
+	         2	  3   2			    2	   3   3
+ + (6 - 30 z + 90 z  + (- 210) z ) y  + (- 10 + 60 z + (- 210) z  + 560 z ) y )
+
+  2		       2	     3		     2	        3
+ x  + (- 1 + 4 z + (- 10) z  + 20 z  + (4 - 20 z + 60 z  + (- 140) z ) y
+
+		       2	      3   2
+ + (- 10 + 60 z + (- 210) z  + 560 z ) y
+
+		  2	      3   3   3
+ + (20 - 140 z + 560 z  + (- 1680) z ) y ) x
+
+"equal" 
+	  3      2
+ n + 1   2 n  + 3 n  + n
+2      + --------------- - 1
+	      6
+	  3      2
+ n + 1   2 n  + 3 n  + n
+2      + --------------- - 1
+	      6
+
+"equal" 
+1
+-
+2
+1
+-
+2
+
+"equal" 
+     2
+5 %pi
+     2
+5 %pi
+
+"equal" 
+55
+55
+
+"equal" 
+(x + 1) (x + 3) (x + 6) (x + 10)
+(x + 1) (x + 3) (x + 6) (x + 10)
+
+"equal" 
+0
+0
+
+"equal" 
+%e
+%e
+
+"equal" 
+inf
+inf
+
+"equal" 
+ind
+ind
+
+"equal" 
+nusum(n n!, n, 0, n)
+(n + 1)! - 1
+
+"not equal #######################################################" 
+	  4  n
+	 n  4
+nusum(----------------, n, 0, n)
+      binomial(2 n, n)
+	     4	    3	  2	       n
+2 (n + 1) (63 n  + 112 n  + 18 n  - 22 n + 3) 4	   2
+------------------------------------------------ - ------
+	    693 binomial(2 n, n)		 3 11 7
+
+"not equal #######################################################" 
+	        4	 n
+	       n  4
+unsum(nusum(----------------, n, 0, n), n)
+	  binomial(2 n, n)
+      4  n
+     n  4
+----------------
+binomial(2 n, n)
+
+"not equal #######################################################" 
+        n
+      /===\
+       ! !   2
+unsum( ! !  i , n)
+       ! !
+      i = 1
+ n - 1
+ /===\
+  ! !   2
+( ! !  i ) (n - 1) (n + 1)
+  ! !
+ i = 1
+
+"not equal #######################################################" 
+	    n
+	  /===\
+	   ! !   2
+nusum(unsum( ! !  i , n), n, 1, n)
+	   ! !
+	  i = 1
+  n
+/===\
+ ! !   2
+ ! !  i  - 1
+ ! !
+i = 1
+
+"not equal #######################################################" 
+		     (n + 3) f(n + 1)   n - 1
+funcsolve((n + 1) f(n) - ---------------- = -----, f(n))
+			n + 1	    n + 2
+	    n
+f(n) = ---------------
+       (n + 1) (n + 2)
+
+"not equal #######################################################" 
+1
+-
+2
+0
+
+"not equal #######################################################" 
+  1
+- -
+  6
+- 1
+---
+ 6
+
+"equal" 
+	         2      3
+    (a + 1) x   a x	   7 x
+1 + --------- - ---- - ---- + . . .
+        2	       8	    48
+		 2	      2	    3	 2	     3
+    (a + 1) x   (- (a  + 2 a + 1)) x    (3 a  + 9 a  + 9 a - 1) x
+1 + --------- + --------------------- + --------------------------
+        2		      8			  48
+
+"not equal #######################################################" 
+	       3
+	      x
+1 + (a + 1) x - -- + . . .
+	      6
+	         3
+	      - x
+1 + (a + 1) x + ----
+	       6
+
+"equal" 
+         2    3	 4      5
+    x   x	   x    5 x    7 x
+1 + - - -- + -- - ---- + ---- + . . .
+    2   8	   16   128    256
+	 2    3	       4	    5
+    x   - x    x    (- 5) x	 7 x
+1 + - + ---- + -- + -------- + ----
+    2    8     16	  128	 256
+
+"equal" 
+1 + x + . . .
+1 + x
+
+"equal" 
+ inf
+/===\
+ ! !    i	    2.5
+ ! !  (x  + 1)
+ ! !
+i = 1
+-----------------
+      2
+     x  + 1
+ inf
+/===\
+ ! !    i	    2.5
+ ! !  (x  + 1)
+ ! !
+i = 1
+-----------------
+      2
+     x  + 1
+
+RAT replaced 2.5 by 5//2 = 2.5
+
+"not equal #######################################################" 
+	         2	    3
+1 + 2.5 x + 3.375 x  + 6.5624999 x  + . . .
+	         2	 3
+1 + 2.5 x + 3.375 x  + 6.5625 x
+
+"not equal #######################################################" 
+	    2	  3
+1   1   x	   x    19 x
+- + - - -- + -- - ----- + . . .
+x   2   12   24    720
+	     2	       3
+1   1   - x   x    (- 19) x
+- + - + --- + -- + ---------
+x   2   12    24	  720
+
+"equal" 
+        4
+   2   x
+- x  - -- + . . .
+       6
+        4
+   2   x
+- x  - --
+       6
+
+"equal" 
+0 + . . .
++ 0
+
+"equal" 
+			       2	        4
+  1     1	      11	    347	 6767 x	 15377 x
+- -- + ---- + ------ - ----- - ------- - -------- + . . .
+   6      4        2   15120	 604800	 7983360
+  x    2 x    120 x
+				2	     4
+- 1    1	     11	  - 347   (- 6767) x    (- 15377) x
+--- + ---- + ------ + ----- + ----------- + ------------
+ 6       4        2	  15120	  604800	      7983360
+x     2 x	   120 x
+
+"equal" 
+     2  2	      4	   2   4	      6	    4	  2   6
+    k  x	  (3 k  - 4 k ) x	 (45 k  - 60 k  + 16 k ) x
+1 - ----- - ---------------- - -------------------------- + . . .
+      2	         24		  720
+     2  2	         4      2	 4	   6	 4       2    6
+    k  x	  (- (3 k  - 4 k )) x    (- (45 k  - 60 k  + 16 k )) x
+1 - ----- + -------------------- + ------------------------------
+      2		 24		        720
+
+"not equal #######################################################" 
+	  2       2     3	   2	   3     4      3	    2	    4
+	(n  - n) x    (n  - 3 n  + 2 n) x    (n  - 6 n  + 11 n  - 6 n) x
+1 + n x + ----------- + -------------------- + ----------------------------
+	     2		   6		          24
+
+							  + . . .
+	  2       2     3	   2	   3     4      3	    2	        4
+	(n  - n) x    (n  - 3 n  + 2 n) x    (n  - 6 n  + 11 n  + (- 6) n) x
+1 + n x + ----------- + -------------------- + --------------------------------
+	     2		   6			  24
+
+"equal" 
+     3	     2		        3			  2
+    y	    y		   y   y	          2      1	 y	    3
+y - -- + (1 - -- + . . .) x + (- - + -- + . . .) x  + (- - + -- + . . .) x
+    6	    2		   2   12		       6	 12
+
+							  + . . .
+     3	     2	          3	      2
+    y	    y	   - y   y    2    - 1   y    3
+y - -- + (1 - --) x + (--- + --) x  + (--- + --) x
+    6	    2	    2    12         6    12
+
+"equal" 
+	 3        2
+        2 x  + 2 y x
+y + x - ------------- + . . .
+	    3
+	  3	 2      2	     3
+        - (x  + 3 y x  + 3 y  x + y )
+x + y + -----------------------------
+		  6
+
+"not equal #######################################################" 
+			  2    3
+1   y	 1    1		 x    x
+- + - + (- -- + - + . . .) x + -- - -- + . . .
+y   6	  2   6		  3    4
+	 y		 y    y
+1   y    - 1   1	      1	  2       - 1    3
+- + - + (--- + -) x + (+ (--)) x  + (+ (---)) x
+y   6     2    6	       3		 4
+         y	      y	          y
+
+"equal" 
+end
+end
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 8862 ms.
+(d1) 			       done
+
+(c1) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest10.mac");
+done
+done
+
+"equal" 
+   n!
+--------
+(n + 1)!
+   n!
+--------
+(n + 1)!
+
+"equal" 
+  1
+-----
+n + 1
+  1
+-----
+n + 1
+
+"equal" 
+       2	 2
+(n + 1)  n!
+       2	 2
+(n + 1)  n!
+
+"equal" 
+        2
+(n + 1)!
+        2
+(n + 1)!
+
+"equal" 
+sqrt(17) + 4
+sqrt(17) + 4
+
+"equal" 
+1
+1
+
+"equal" 
+[1, 1, 1, 2]
+[1, 1, 1, 2]
+
+"equal" 
+        1
+1 + ---------
+	1
+    1 + -----
+	  1
+        1 + -
+	  2
+        1
+1 + ---------
+	1
+    1 + -----
+	  1
+        1 + -
+	  2
+
+"not equal #######################################################" 
+4
+4
+
+"equal" 
+[1, 1, 2, 1, 2, 1, 2, 1, 2]
+[1, 1, 2, 1, 2, 1, 2, 1, 2]
+
+"equal" 
+[ 265  97 ]
+[         ]
+[ 153  56 ]
+matrix([265, 97], [153, 56])
+
+"equal" 
+1.7321429
+1.7321429
+
+"equal" 
+[1, 1, 1, 2]
+[1, 1, 1, 2]
+
+"equal" 
+        1
+1 + ---------
+	1
+    1 + -----
+	  1
+        1 + -
+	  2
+        1
+1 + ---------
+	1
+    1 + -----
+	  1
+        1 + -
+	  2
+
+"not equal #######################################################" 
+4
+4
+
+"equal" 
+[1, 1, 2, 1, 2, 1, 2, 1, 2]
+[1, 1, 2, 1, 2, 1, 2, 1, 2]
+
+"equal" 
+[ 265  97 ]
+[         ]
+[ 153  56 ]
+matrix([265, 97], [153, 56])
+
+"equal" 
+1.7321429
+1.7321429
+
+"equal" 
+done
+done
+
+"equal" 
+true
+true
+
+"equal" 
+f(b z) + f(a y) + f(x)
+f(b z) + f(a y) + f(x)
+
+"equal" 
+  1       1        1
+----- - ----- + -------- + x
+x + 2   x + 1	   2
+	      (x + 1)
+  1       1        1
+----- - ----- + -------- + x
+x + 2   x + 1	   2
+	      (x + 1)
+
+"equal" 
+      1
+y + ----- + 1
+    x + 1
+      1
+y + ----- + 1
+    x + 1
+
+"equal" 
+[a = - 0.5, b = 3]
+[a = - 0.5, b = 3]
+
+"equal" 
+g(b) g(c) + g(a)
+g(b) g(c) + g(a)
+
+"equal" 
+g(b c) + g(a)
+g(b c) + g(a)
+
+"equal" 
+[[a + 3, 4], [4, 3.5]]
+[[a + 3, 4], [4, 3.5]]
+
+"equal" 
+  2	          2
+(a  + 2 a + 1) y + x
+  2	          2
+(a  + 2 a + 1) y + x
+
+"equal" 
+       2	    2
+(a + 1)  y + x
+       2	    2
+(a + 1)  y + x
+
+"equal" 
+   a x + b
+u v        + c
+   a x + b
+u v        + c
+
+"equal" 
+	     f(f(f(a) f(x)) + f(b))
+f(f(f(u) f(f(v)		       )) + f(c))
+	     f(f(f(a) f(x)) + f(b))
+f(f(f(u) f(f(v)		       )) + f(c))
+
+"equal" 
+[y + x, 0, - 3.2, 2.5e+20, x]
+[y + x, 0, - 3.2, 2.5e+20, x]
+
+"equal" 
+union(x, y) := if x = [] then y else (if member(t : first(x), y)
+
+		    then union(rest(x), y) else cons(t, union(rest(x), y)))
+union(x, y) := if x = [] then y else (if member(t : first(x), y)
+
+		    then union(rest(x), y) else cons(t, union(rest(x), y)))
+
+"equal" 
+        2	    2	   1
+[b, 1, x , - x , a, y, -]
+		   2
+        2	    2	   1
+[b, 1, x , - x , a, y, -]
+		   2
+
+"equal" 
+        4	     3
+ 5   5 x	  5 x    x
+x  - ---- + ---- - -
+      2	   3     6
+        4	     3
+ 5   5 x	  5 x    - x
+x  - ---- + ---- + ---
+      2	   3      6
+
+"equal" 
+      5  5    1
+[1, - -, -, - -]
+      2  3    6
+    - 5  5  - 1
+[1, ---, -, ---]
+     2   3   6
+
+"equal" 
+  5
+- -
+  2
+- 5
+---
+ 2
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 1367 ms.
+(d1) 			       done
+
+(c1) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest11.mac");
+done
+done
+
+"equal" 
+			   b     = b
+			    1, 2	  1, 2
+
+done
+done
+
+"equal" 
+				   1//3
+			      2 x - 2
+			atan(-------------)
+       2	  1//3	  2//3	      1//3		 1//3
+  log(x  - 2     x + 2    )	     2     sqrt(3)	  log(x + 2    )
+- ------------------------- + ------------------- + --------------
+	    2//3		    2//3		        2//3
+	 6 2		   2     sqrt(3)	     3 2
+				   1//3
+			      2 x - 2
+			atan(-------------)
+       2	  1//3	  2//3	      1//3		 1//3
+- log(x  - 2     x + 2    )	     2     sqrt(3)	  log(x + 2    )
+--------------------------- + ------------------- + --------------
+	   2//3		    2//3		        2//3
+	6 2		   2     sqrt(3)	     3 2
+
+"equal" 
+				 1//3
+	1		    2 x - 2		       1
+---------------------- - ------------------------------ + -------------------
+	 1//3 2	        2//3   2    1//3      2//3	 2//3	  1//3
+   (2 x - 2    )	     6 2	   (x  - 2     x + 2    )   3 2     (x + 2    )
+3 (-------------- + 1)
+         2//3
+      3 2
+				 1//3
+	1		    2 x - 2		       1
+---------------------- - ------------------------------ + -------------------
+	 1//3 2	        2//3   2    1//3      2//3	 2//3	  1//3
+   (2 x - 2    )	     6 2	   (x  - 2     x + 2    )   3 2     (x + 2    )
+3 (-------------- + 1)
+         2//3
+      3 2
+
+"equal" 
+  1
+------
+ 3
+x  + 2
+  1
+------
+ 3
+x  + 2
+
+"equal" 
+Negterm + Quotient + Quotient
+negterm + quotient + quotient
+
+"not equal #######################################################" 
+g(l) := catch(map(lambda([x], if x < 0 then throw(x) else f(x)), l))
+g(l) := catch(map(lambda([x], if x < 0 then throw(x) else f(x)), l))
+
+"equal" 
+[f(1), f(2), f(3), f(7)]
+[f(1), f(2), f(3), f(7)]
+
+"equal" 
+- 3
+- 3
+
+"equal" 
+ 2
+y  + b x
+ 2
+y  + b x
+
+"equal" 
+done
+done
+
+"equal" 
+       2
+b x + y
+       2
+b x + y
+
+"equal" 
+ 2    2
+y  - y
+ 2    2
+y  - y
+
+"not equal #######################################################" 
+[y]
+[y]
+
+"equal" 
+       2
+b x + a
+       2
+b x + a
+
+"equal" 
+done
+done
+
+"equal" 
+ 2
+a  + b x
+ 2
+a  + b x
+
+"equal" 
+ 2    2
+a  - a
+ 2    2
+a  - a
+
+"not equal #######################################################" 
+[a]
+[a]
+
+"equal" 
+       2
+b x + a
+       2
+b x + a
+
+"equal" 
+done
+done
+
+"equal" 
+ 2
+a  + b x
+ 2
+a  + b x
+
+"equal" 
+ 2    2
+a  - a
+ 2    2
+a  - a
+
+"not equal #######################################################" 
+[a]
+[a]
+
+"equal" 
+done
+done
+
+"equal" 
+3 f(b) + 2 f(a)
+3 f(b) + 2 f(a)
+
+"equal" 
+f(1, x) y + 2 f(x, x)
+f(1, x) y + 2 f(x, x)
+
+"equal" 
+done
+done
+
+"equal" 
+3 f(b) + 2 f(a)
+3 f(b) + 2 f(a)
+
+"equal" 
+done
+done
+
+"equal" 
+2 f(a)
+2 f(a)
+
+"equal" 
+done
+done
+
+"equal" 
+2 f(a) f(b)
+2 f(a) f(b)
+
+"equal" 
+done
+done
+
+"equal" 
+g(g(g(a, b), c), d)
+g(g(g(a, b), c), d)
+
+"equal" 
+0
+0
+
+"equal" 
+done
+done
+
+"equal" 
+g(c, g(g(b, a), d))
+g(g(g(a, b), c), d)
+
+"not equal #######################################################" 
+g(d, g(g(c, b), a)) - g(b, g(g(d, a), c))
+0
+
+"not equal #######################################################" 
+done
+done
+
+"equal" 
+h(x, y, z)
+h(x, y, z)
+
+"equal" 
+done
+done
+
+"equal" 
+h(x, y, z)
+h(x, y, z)
+
+"equal" 
+done
+done
+
+"equal" 
+- h(x, y, z)
+- h(x, y, z)
+
+"equal" 
+done
+done
+
+"equal" 
+j(a, b, c, d)
+j(a, b, c, d)
+
+"equal" 
+done
+done
+
+"equal" 
+- f(x)
+- f(x)
+
+"equal" 
+done
+done
+
+"equal" 
+g(x)
+g(x)
+
+"equal" 
+done
+done
+
+"equal" 
+true
+true
+
+"equal" 
+1
+1
+
+"equal" 
+f
+f
+
+"equal" 
+[hashed, 2, [1, x]]
+[hash_table, true, [1, x]]
+
+"not equal #######################################################" 
+[declared, 2, [2, 3]]
+[declared, 2, [2, 3]]
+
+"equal" 
+[System Function]
+[system function]
+
+"not equal #######################################################" 
+[var1 > 0]
+[var1 > 0]
+
+"equal" 
+[Database Info, var1 > 0]
+[database info, var1 > 0]
+
+"not equal #######################################################" 
+2
+2
+
+"equal" 
+[value]
+[value]
+
+"equal" 
+r
+r
+
+"equal" 
+r
+r
+
+"equal" 
+			      dr	 y
+			      -- = -
+			      dy	 r
+
+			      dr	 x
+			      -- = -
+			      dx	 r
+
+done
+done
+
+"equal" 
+[r]
+[r]
+
+"equal" 
+r
+r
+
+"equal" 
+r
+r
+
+"equal" 
+			      dr	 y
+			      -- = -
+			      dy	 r
+
+			      dr	 x
+			      -- = -
+			      dx	 r
+
+			      dr	 y
+			      -- = -
+			      dy	 r
+
+			      dr	 x
+			      -- = -
+			      dx	 r
+
+done
+done
+
+"equal" 
+[r]
+[r]
+
+"equal" 
+transcendental
+transcendental
+
+"equal" 
+transcendental
+transcendental
+
+"equal" 
+false
+false
+
+"equal" 
+typeof(x) := block([q], if numberp(x) then return(algebraic), 
+
+if not atom(x) then return(maplist(typeof, x)), q : get(x, type), 
+
+if q = false then error("not numeric") else q)
+typeof(x) := block([q], if numberp(x) then return(algebraic), 
+
+if not atom(x) then return(maplist(typeof, x)), q : get(x, type), 
+
+if q = false then error("not numeric") else q)
+
+"equal" not numeric
+[]
+[]
+
+"equal" 
+[transcendental, [false, transcendental]]
+[transcendental, [false, transcendental]]
+
+"equal" 
+true
+true
+
+"equal" 
+[a > 1]
+[a > 1]
+
+"equal" 
+true
+true
+
+"equal" 
+false
+false
+
+"equal" 
+true
+true
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 2522 ms.
+(d1) 			       done
+
+(c1) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest12.mac");
+done
+done
+
+"equal" 
+[^rule1, simpexpt]
+[^rule1, simpexpt]
+
+"equal" 
+       2
+1 - cos (y)
+       2
+1 - cos (y)
+
+"equal" 
+done
+done
+
+"equal" 
+nonzeroandfreeof(x, e) := is(e # 0 and freeof(x, e))
+nonzeroandfreeof(x, e) := is(e # 0 and freeof(x, e))
+
+"equal" 
+done
+done
+
+"equal" 
+linear
+linear
+
+"equal" 
+      2
+[b = y , a = y + 4, x = z]
+      2
+[b = y , a = y + 4, x = z]
+
+"equal" 
+done
+done
+
+"equal" 
+constinterval(l, h) := constantp(h - l)
+constinterval(l, h) := constantp(h - l)
+
+"equal" 
+done
+done
+
+"equal" 
+done
+done
+
+"equal" 
+done
+done
+
+"equal" 
+ x + 2 %pi
+/
+[
+I	 sin(t) dt
+]
+/
+ x + %pi
+ x + 2 %pi
+/
+[
+I	 sin(t) dt
+]
+/
+ x + %pi
+
+"equal" 
+[b = x + 2 %pi, a = x + %pi, x = t, f = sin(t)]
+[b = x + 2 %pi, a = x + %pi, x = t, f = sin(t)]
+
+"equal" 
+ t
+/
+[
+I  sin(t) dt
+]
+/
+ 0
+ t
+/
+[
+I  sin(t) dt
+]
+/
+ 0
+
+"equal" 
+false
+false
+
+"equal" 
+done
+done
+
+"equal" 
+false
+false
+
+"equal" 
+[sinrule1, simp-%sin]
+[sinrule1, simp-%sin]
+
+"equal" 
+sin(x) cos(%i y) + %i cos(x) sinh(y)
+sin(x) cos(%i y) + %i cos(x) sinh(y)
+
+"equal" 
+true
+true
+
+"equal" 
+ 0
+0  has been generated
+[]
+[]
+
+"equal" 
+[^rule2, simpexpt]
+[^rule2, simpexpt]
+
+"equal" 
+1
+1
+
+"equal" 
+^
+^
+
+"equal" 
+[^rule3, simpexpt]
+[^rule3, simpexpt]
+
+"equal" 
+	  2
+(sin(x) + 1)
+	  2
+(sin(x) + 1)
+
+"equal" 
+	    2
+2 sin(x) - cos (x) + 2
+	    2
+2 sin(x) - cos (x) + 2
+
+"equal" 
+       2
+1 - cos (x)
+       2
+1 - cos (x)
+
+"equal" 
+done
+done
+
+"equal" 
+done
+done
+
+"equal" 
+[^rule4, simpexpt]
+[^rule4, simpexpt]
+
+"equal" 
+       2
+1 - cos (y)
+       2
+1 - cos (y)
+
+"equal" 
+done
+done
+
+"equal" 
+nonzeroandfreeof(x, e) := is(e # 0 and freeof(x, e))
+nonzeroandfreeof(x, e) := is(e # 0 and freeof(x, e))
+
+"equal" 
+done
+done
+
+"equal" 
+linear
+linear
+
+"equal" 
+      2
+[b = y , a = y + 4, x = z]
+      2
+[b = y , a = y + 4, x = z]
+
+"equal" 
+done
+done
+
+"equal" 
+constinterval(l, h) := constantp(h - l)
+constinterval(l, h) := constantp(h - l)
+
+"equal" 
+done
+done
+
+"equal" 
+done
+done
+
+"equal" 
+done
+done
+
+"equal" 
+ x + 2 %pi
+/
+[
+I	 sin(t) dt
+]
+/
+ x + %pi
+ x + 2 %pi
+/
+[
+I	 sin(t) dt
+]
+/
+ x + %pi
+
+"equal" 
+[b = x + 2 %pi, a = x + %pi, x = t, f = sin(t)]
+[b = x + 2 %pi, a = x + %pi, x = t, f = sin(t)]
+
+"equal" 
+ t
+/
+[
+I  sin(t) dt
+]
+/
+ 0
+ t
+/
+[
+I  sin(t) dt
+]
+/
+ 0
+
+"equal" 
+false
+false
+
+"equal" 
+[a, b, f, x]
+[a, b, f, x]
+
+"equal" 
+done
+done
+
+"equal" 
+oneless(x, y) := is(x = y - 1)
+oneless(x, y) := is(x = y - 1)
+
+"equal" 
+a1 a2! --> a1! where oneless(a2, a1)
+a1 a2! --> a1! where oneless(a2, a1)
+
+"equal" 
+a1!
+--- --> (a1 - 1)!
+a1
+a1!
+--- --> (a1 - 1)!
+a1
+
+"equal" 
+(m - 1)! n!
+(m - 1)! n!
+
+"equal" 
+   2	         2
+sin (a) --> 1 - cos (a)
+   2	         2
+sin (a) --> 1 - cos (a)
+
+"equal" 
+   4
+sin (x)
+   4
+sin (x)
+
+"equal" 
+   4	     2
+cos (x) - 2 cos (x) + 1
+   4	     2
+cos (x) - 2 cos (x) + 1
+
+"equal" 
+done
+done
+
+"equal" 
+oneless(x, y) := is(x = y - 1)
+oneless(x, y) := is(x = y - 1)
+
+"equal" 
+a1 a2! --> a1! where oneless(a2, a1)
+a1 a2! --> a1! where oneless(a2, a1)
+
+"equal" 
+a1!
+--- --> (a1 - 1)!
+a1
+a1!
+--- --> (a1 - 1)!
+a1
+
+"equal" 
+(m - 1)! n!
+(m - 1)! n!
+
+"equal" 
+   2	         2
+sin (a) --> 1 - cos (a)
+   2	         2
+sin (a) --> 1 - cos (a)
+
+"equal" 
+   4
+sin (x)
+   4
+sin (x)
+
+"equal" 
+   4	     2
+cos (x) - 2 cos (x) + 1
+   4	     2
+cos (x) - 2 cos (x) + 1
+
+"equal" 
+true
+true
+
+"equal" 
+	  2
+poissimp(sin (x))
+1   1
+- - - cos(2 x)
+2   2
+
+"not equal #######################################################" 
+    2
+(2 a  - b) cos(2 y + x) + (a b + 5) sin(4 x - u)
+    2
+(2 a  - b) cos(2 y + x) + (a b + 5) sin(4 x - u)
+
+"equal" 
+		   2
+outofpois(poisexpt((2 a  - b) cos(2 y + x) + (a b + 5) sin(4 x - u), 2))
+1     2	  2		     2
+- (2 a  - b)  cos(4 y + 2 x) - (2 a  - b) ((- a) b - 5) sin(2 y + 5 x - u)
+2
+
+       2
+ + (2 a  - b) ((- a) b - 5) sin(2 y - 3 x + u)
+
+   - 1	          2	         1	    2   1	    2     2
+ + --- ((- a) b - 5)  cos(8 x - 2 u) + - ((- a) b - 5)  + - (2 a  - b)
+    2			         2	        2
+
+"not equal #######################################################" 
+			   2
+printpois(outofpois(poisexpt((2 a  - b) cos(2 y + x) + (a b + 5) sin(4 x - u), 
+
+							     2)))
+done
+
+"not equal #######################################################" 
+				 2
+outofpois(poisint(outofpois(poisexpt((2 a  - b) cos(2 y + x)
+
+				     + (a b + 5) sin(4 x - u), 2)), y))
+1     2	  2		 1     2
+- (2 a  - b)  sin(4 y + 2 x) + - (2 a  - b) ((- a) b - 5) cos(2 y + 5 x - u)
+8			 2
+
+			  - 1     2
+		          + --- (2 a  - b) ((- a) b - 5) cos(2 y - 3 x + u)
+			   2
+
+"not equal #######################################################" 
+						2
+outofpois(poissimp(outofpois(poisint(outofpois(poisexpt((2 a  - b) cos(2 y + x)
+
+				   + (a b + 5) sin(4 x - u), 2)), y))))
+1     2	  2		 1     2
+- (2 a  - b)  sin(4 y + 2 x) + - (2 a  - b) ((- a) b - 5) cos(2 y + 5 x - u)
+8			 2
+
+			  - 1     2
+		          + --- (2 a  - b) ((- a) b - 5) cos(2 y - 3 x + u)
+			   2
+
+"not equal #######################################################" 
+	  5	  5
+poissimp(sin (x) + cos (x))
+1	    1	        - 5	   5	       5	        5
+-- sin(5 x) + -- cos(5 x) + --- sin(3 x) + -- cos(3 x) + - sin(x) + - cos(x)
+16	    16	        16	   16	       8	        8
+
+"not equal #######################################################" 
+false
+false
+
+"equal" Batch spent 0.0 seconds in evaluation 
+Evaluation took 2858 ms.
+(d1) 			       done
+
+(c1) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest13.mac");
+ 2 dy	      sin(x)
+x  -- + 3 x y = ------
+   dx	        x
+ 2 dy	      sin(x)
+x  -- + 3 x y = ------
+   dx	        x
+
+"equal" 
+      2 dy	 sin(x)
+ode2(x  -- + 3 x y = ------, y, x)
+        dx	   x
+    %c - cos(x)
+y = -----------
+         3
+        x
+
+"not equal #######################################################" 
+	2 dy	     sin(x)
+ic1(ode2(x  -- + 3 x y = ------, y, x), x = %pi, y = 0)
+	  dx	       x
+    - (cos(x) + 1)
+y = --------------
+	 3
+	x
+
+"not equal #######################################################" 
+ 2
+d y      dy 3
+--- + y (--)  = 0
+  2      dx
+dx
+ 2
+d y      dy 3
+--- + y (--)  = 0
+  2      dx
+dx
+
+"equal" 
+      2
+     d y	    dy 3
+ode2(--- + y (--)  = 0, y, x)
+       2	    dx
+     dx
+ 3
+y  + 6 %k1 y
+------------ = x + %k2
+     6
+
+"not equal #######################################################" 
+	2
+         d y      dy 3		         dy
+ic2(ode2(--- + y (--)  = 0, y, x), x = 0, y = 0, -- = 2)
+	 2      dx		         dx
+         dx
+      3
+- (2 y  - 3 y)
+-------------- = x
+      6
+
+"not equal #######################################################" 
+	2
+         d y      dy 3
+bc2(ode2(--- + y (--)  = 0, y, x), x = 0, y = 1, x = 1, y = 3)
+	 2      dx
+         dx
+ 3
+y  - 10 y	      3
+--------- = x - -
+    6	      2
+
+"not equal #######################################################" 
+   2  2  2  2    2  2  2    2	 2  2    2  2
+- k  l  m  n  + k  m  n  - k  l  n  + k  n
+    2   2	 2  2    2  2  2	   2   2  2    2  2
+(- k ) l  m  n  + k  m  n  + (- k ) l  n  + k  n
+
+"equal" 
+ 2    2
+l  + k  = 1
+ 2    2
+l  + k  = 1
+
+"equal" 
+ 2    2
+n  - m  = 1
+ 2    2
+n  - m  = 1
+
+"equal" 
+ 4  4
+k  n
+ 4  4
+k  n
+
+"equal" 
+k1 k4 - k2 k3 - k1 k2
+---------------------
+	 2
+         k3
+k1 k4 - k2 k3 + (- k1) k2
+-------------------------
+	   2
+	 k3
+
+"equal" 
+k1 k4 - k2 k3 = 0
+k1 k4 - k2 k3 = 0
+
+"equal" 
+k3 k4 + k1 k2 = 0
+k3 k4 + k1 k2 = 0
+
+"equal" 
+k4
+--
+k3
+k4
+--
+k3
+
+"equal" 
+	   2
+z + x y + 2 x
+	   2
+z + x y + 2 x
+
+"equal" 
+- z + 5 y + 3 x - 1
+- z + 5 y + 3 x - 1
+
+"equal" 
+ 2    2
+z  - y  + x + 5
+ 2    2
+z  - y  + x + 5
+
+"equal" 
+	  2    2					  2
+eliminate([z  - y  + x + 5, - z + 5 y + 3 x - 1, z + x y + 2 x ], [y, z])
+       8	       7	       6	        5	         4	   3	       2
+[7425 x  - 1170 x  + 1299 x  + 12076 x  + 22887 x  + (- 5154) x  + (- 1291) x
+
+						  + 7688 x + 15376]
+
+"not equal #######################################################" 
+d	  d
+-- (f(x)) = -- (g(x)) + sin(x)
+dx	  dx
+d	  d
+-- (f(x)) = -- (g(x)) + sin(x)
+dx	  dx
+
+"equal" 
+ 2
+d	   d
+--- (g(x)) = -- (f(x)) - cos(x)
+  2	   dx
+dx
+ 2
+d	   d
+--- (g(x)) = -- (f(x)) - cos(x)
+  2	   dx
+dx
+
+"equal" 
+a
+a
+
+"equal" 
+1
+1
+
+"equal" 
+End of file while scanning expression
+Batch spent 0.0 seconds in evaluation 
+
+(c2) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest13s.mac");
+"{"
+verbify({)
+
+"not equal #######################################################" 
+"|"
+verbify(|)
+
+"not equal #######################################################" 
+{x | x > 0}
+{x | x > 0}
+
+"equal" 
+{x | x < 2}
+{x | x < 2}
+
+"equal" 
+"ou"
+verbify(ou)
+
+"not equal #######################################################" 
+"oi"
+verbify(oi)
+
+"not equal #######################################################" 
+{x | x > 0} ou {x | x < 2}
+{x | x > 0} ou {x | x < 2}
+
+"equal" 
+{x | x > 0} ou {x | x < 2}
+{x | x > 0} ou {x | x < 2}
+
+"equal" 
+{1, 2, 3}
+{1, 2, 3}
+
+"equal" 
+{3, 4, 5}
+{3, 4, 5}
+
+"equal" 
+{1, 2, 3} ou {1, 2, 3} ou {3, 4, 5}
+{1, 2, 3} ou {1, 2, 3} ou {3, 4, 5}
+
+"equal" 
+"ou"
+verbify(ou)
+
+"not equal #######################################################" 
+"oi"
+verbify(oi)
+
+"not equal #######################################################" 
+{1, 2, 3} ou {1, 2, 3} ou {7}
+{1, 2, 3} ou {1, 2, 3} ou {7}
+
+"equal" 
+done
+done
+
+"equal" 
+lisp: car or cdr of number   
+Batch spent 0.0 seconds in evaluation 
+
+(c2) quit();
+
+lisp macsyma
+(c1) testbatch("tests2>rtest14.mac");
+0.1320342
+0.13203421
+
+"not equal #######################################################" 
+0.99999992
+0.76519775
+
+"not equal #######################################################" 
+4.1359025e-25 %i + 4.1359025e-25
+0.12894326 - 5.7177445e-08 %i
+
+"not equal #######################################################" 
+true
+true
+
+"equal" 
+true
+true
+
+"equal" 
+		      a t
+	        - p t - ---
+		       4
+specint(sqrt(t) %e	         , t)
+  sqrt(%pi)
+-------------
+       a 3//2
+2 (p + -)
+       4
+
+"not equal #######################################################" 
+	         2
+	        t
+	      - --- - p t
+         3//4     2 b
+specint(t	    %e	       , t)
+					  2
+				         b p
+		  2   8 sqrt(%pi) %m        (----)
+	         b p	          - 5  - 1  2
+	         ----	          ---, ---
+        3	  7//8    4		 8    4
+3 gamma(-) b     %e	    (------------------------------
+        4		        5//8       3   1//4
+		     3 2	   gamma(-) b     sqrt(p)
+			         8
+
+							   2
+				   3//8		          b p
+				  2     sqrt(%pi) %m         (----)
+						- 5	 2
+						---, 1//4
+						 8
+			          - ---------------------------------)//4
+					   7   1//4
+				       gamma(-) b	  sqrt(p)
+					   8
+
+"not equal #######################################################" 
+	- p t - 2 sqrt(a) sqrt(t)
+        %e
+specint(---------------------------, t)
+	        sqrt(t)
+						       a
+		        a				      ---
+	 a	       ---		     sqrt(a)    2 p
+	---	       2 p   sqrt(2) sqrt(%pi) erf(-------) %e
+	2 p  sqrt(%pi) %e			     sqrt(p)
+sqrt(2) %e    (--------------- - ------------------------------------)
+	         sqrt(2)		          2
+----------------------------------------------------------------------
+			 sqrt(p)
+
+"not equal #######################################################" 
+	- p t		   2
+specint(%e      sin(a t) cosh(b t ), t)
+        2		    2			  2
+       p  + 2 %i a p + a	          2 %i a p + a
+     - ------------------	          -------------
+	    4 b			     2 b	        %i p + a
+(- %e		     ) (sqrt(%pi) %e	    erf(---------)
+					        2 sqrt(b)
+
+	      2				  2
+	     a				 p  + 2 %i a p
+	     ---				 -------------
+	     2 b	   %i p - a		      2 b	         p + %i a
+ - sqrt(%pi) %e    erf(---------) + sqrt(%pi) %i %e	     erf(---------)
+		   2 sqrt(b)			         2 sqrt(b)
+
+		   2
+		  p
+		  ---
+		  2 b     p - %i a
+ + (- sqrt(%pi)) %i %e    erf(---------)
+			2 sqrt(b)
+
+				     2			        2
+			    %i a p    p		      2 %i a p + a
+			    ------    ---		      -------------
+			      b	    2 b			 2 b
+ + (sqrt(%pi) %i - sqrt(%pi) %i %e      ) %e    + (- sqrt(%pi)) %e
+
+	      2
+	     a
+	     ---
+	     2 b
+ + sqrt(%pi) %e   )//(8 sqrt(b))
+
+"not equal #######################################################" 
+				 - p t
+specint(%j (2 sqrt(a) sqrt(t)) sqrt(t) %e     , t)
+	1
+	- a//p
+sqrt(a) %e
+----------------
+        2
+       p
+
+"not equal #######################################################" 
+         2   - p t
+specint(t  %e      %j (a t), t)
+		 1
+      3 a
+---------------
+  2
+ a      5//2  4
+(-- + 1)	   p
+  2
+ p
+
+"not equal #######################################################" 
+	  - p t
+specint(t %e      hstruve (t), t)
+		     1
+		 2	   2
+       16 (2 p sqrt(p  + 1) + 2 p )
+------------------------------------------
+     3//2	 4	    2	      2
+9 %pi     p  (2 p sqrt(p  + 1) + 2 p  + 1)
+
+"not equal #######################################################" 
+		       3//2   - p t
+specint(hstruve (sqrt(t)) t	  %e     , t)
+	     1
+     1			       1
+  - ---			      ---
+    4 p	     3//2		      4 p			      %i	     2
+%e      ((140 p     + 10 sqrt(p)) %e    + 140 sqrt(%pi) %i erf(---------) p
+						   2 sqrt(p)
+
+		      %i			          %i
+ + 20 sqrt(%pi) %i erf(---------) p + 5 sqrt(%pi) %i erf(---------))
+		   2 sqrt(p)		       2 sqrt(p)
+
+	4
+//(8 %pi p )
+
+"not equal #######################################################" 
+	  - p t	     a t	       a t
+specint(t %e      %ibes (---) %ibes (---), t)
+		   0  2	     1  2
+       a t         a t
+%ibes (---) %ibes (---)
+     0  2	       1  2
+-----------------------
+	 2
+	p
+
+"not equal #######################################################" 
+         3//4   - p t
+specint(t	    %e	  %j    (t) %j    (t), t)
+		    1//4	    1//2
+	  1	         1
+2 %i (-------------- - --------------)
+       2 %i     3//4        2 %i 3//4
+      (---- + 1)	   (1 - ----)
+        p		         p
+--------------------------------------
+	3//4	 1   3//2
+         2     gamma(-) p
+		 4
+
+"not equal #######################################################" 
+	2	     5//2	  - p t
+specint(%y    (sqrt(t)) t     %e     , t)
+	1//2
+			    %i	  5//2   - 1//p
+         (- 3) sqrt(%pi) %i erf(-------) p     %e
+			  sqrt(p)
+(- 12) ((----------------------------------------------
+			 8
+
+		  %i      3//2   - 1//p
+   sqrt(%pi) %i erf(-------) p     %e
+		sqrt(p)
+ - ----------------------------------------
+		  2
+
+		      %i		   - 1//p
+   (- sqrt(%pi)) %i erf(-------) sqrt(p) %e	         2
+		    sqrt(p)		  (- 3) p	   - p    2
+ + ---------------------------------------------- + -------- + ---)//p
+		     2			     4	    2
+
+		     %i	   3//2   - 1//p
+      sqrt(%pi) %i erf(-------) p     %e
+		   sqrt(p)
+ + 2 (----------------------------------------
+		     4
+
+		  %i	         - 1//p
+   sqrt(%pi) %i erf(-------) sqrt(p) %e
+		sqrt(p)		        p
+ + ------------------------------------------ + -)//p
+		   2		        2
+
+		      %i		   - 1//p
+   (- sqrt(%pi)) %i erf(-------) sqrt(p) %e
+		    sqrt(p)		        4
+ + ----------------------------------------------)//(%pi p )
+		     2
+
+"not equal #######################################################" 
+	2		    - p t
+specint(%j    (sqrt(t)) sqrt(t) %e     , t)
+	1//2
+	   %i	  - 1//p
+(- %i) erf(-------) %e
+	 sqrt(p)
+----------------------------
+	       3//2
+      sqrt(%pi) p
+
+"not equal #######################################################" 
+	        - p t
+specint(sqrt(t) %e	    %ibes (t), t)
+		         1
+sqrt(%pi) %ibes (t)
+	     1
+-------------------
+         3//2
+      2 p
+
+"not equal #######################################################" 
+			 - p t
+specint(%h       (sqrt(t)) t %e     , t)
+	2//3, 1
+				1
+			       - ---
+	     1	          - 1      8 p
+(- 4) %i gamma(-) %m         (---) %e
+	     3    - 3       4 p
+		---, 1//3
+		 2
+------------------------------------------
+	 5//6	          2   3//2
+    3 (- 1)     sqrt(3) gamma(-) p
+			3
+
+			      1
+			   - ---
+	 1	      - 1	     8 p
+   4 gamma(-) %m	     (---) %e
+	 3    - 3	      4 p
+	      ---, 1//3
+	       2
+ + -----------------------------------
+	    5//6	     2   3//2
+       3 (- 1)     gamma(-) p
+		     3
+
+				  1
+			         - ---
+	        2		  - 1	 8 p
+   (- 8) %i gamma(-) %m	 (---) %e
+	        3	   - 3  - 1 4 p
+		   ---, ---
+		    2    3
+ + -----------------------------------------
+	   1//6		  1   3//2
+      3 (- 1)     sqrt(3) gamma(-) p
+			  3
+
+"not equal #######################################################" 
+	        - p t
+specint(sqrt(t) %e	    %h	   (t), t)
+		      3//4, 2
+	 1	          1         1      3//8  9//4
+5 %i gamma(-) %p	    (------------) (-- - 1)	  p
+	 4    - 3	 - 3      1	 4
+	      ---, --- sqrt(-- + 1)   p
+	       2	  4	 2
+			p
+---------------------------------------------------------
+		 1//4	         2 3
+	   18 (- 1)     sqrt(2) gamma (-)
+				 4
+
+	 1	          1         1      3//8  9//4
+   5 gamma(-) %p	    (------------) (-- - 1)	  p
+	 4    - 3	 - 3      1	 4
+	      ---, --- sqrt(-- + 1)   p
+	       2	  4	 2
+			p
+ + ------------------------------------------------------
+		   1//4		 2 3
+	     18 (- 1)     sqrt(2) gamma (-)
+				   4
+
+	    3		    1	    3//4
+   4 %i gamma(-) %p	        (------------) p
+	    4    - 3	    1
+	         ---, 3//4 sqrt(-- + 1)
+		2	     2
+			    p
+ + ---------------------------------------------
+	    3//4	    2 1   1      3//8
+         (- 1)     gamma (-) (-- - 1)
+		      4	 4
+			p
+
+"not equal #######################################################" 
+         3//2   - p t
+specint(t	    %e	  %h	 (t), t)
+		    1//2, 1
+				       1	         1
+			   sqrt(2) %i (------ - ------------)
+				     1	     1	  2  2
+				     -- + 1   (-- + 1)  p
+				      2	      2
+	    4			     p	     p
+------------------------------ - ----------------------------------
+	         1      2  3		     2
+sqrt(2) sqrt(%pi) (-- + 1)  p		    sqrt(%pi) p
+		2
+	         p
+
+"not equal #######################################################" 
+         3//2   - t
+specint(t	    %e    %y (a t), t)
+		  1
+         1        3//4	    1		         1
+15 %i (------ - 1)	   (---------------------- + ----------------------)
+        2			 2	  3//2	          2      3//2
+       a  + 1	    (sqrt(a  + 1) + 1)       (1 - sqrt(a  + 1))
+------------------------------------------------------------------------
+			       2
+		        16 sqrt(a  + 1)
+
+"not equal #######################################################" 
+         2   - p t
+specint(t  %e      %j (a t), t)
+		 1
+      3 a
+---------------
+  2
+ a      5//2  4
+(-- + 1)	   p
+  2
+ p
+
+"not equal #######################################################" 
+				 - p t
+specint(%j (2 sqrt(a) sqrt(t)) sqrt(t) %e     , t)
+	1
+	- a//p
+sqrt(a) %e
+----------------
+        2
+       p
+
+"not equal #######################################################" 
+         3//2   - p t
+specint(t	    %e	  %m	 (t), t)
+		    1//2, 1
+       1		    1
+6 (--------- + --------------------)
+         1          1         1   2
+   1 - -----   (p + -) (1 - -----)
+	 1        2	  1
+       p + -	        p + -
+	 2		  2
+------------------------------------
+	         1 4
+	    (p + -)
+	         2
+
+"not equal #######################################################" 
+true
+true
+
+"equal" 
+		  2   a t - p t
+specint(erf(sqrt(t)) t  %e	     , t)
+	 1		   1		          3
+15 (--------------- - ----------------------- + --------------------------)
+	 1		   1	 3//2	       2	  1       5//2
+    sqrt(----- + 1)	  (p - a) (----- + 1)       4 (p - a)  (----- + 1)
+         p - a		 p - a		          p - a
+---------------------------------------------------------------------------
+				7//2
+			 4 (p - a)
+
+"not equal #######################################################" Batch spent 
+0.0 seconds in evaluation 
+Evaluation took 4365 ms.
+(d1) 			       done
+
+(c2) quit();
+
+
+r 18:20 21.875 3756
+
