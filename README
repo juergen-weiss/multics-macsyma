@@ -1,0 +1,9 @@
+move files from ecs, helpers and src into one directory
+
+compile-all.ec compiles all lisp files
+
+makemacsyma.ec generates a save file
+
+move files from the tests directory into a tests directory
+and run run-tests.ec to run all tests. Not all succeed.
+
