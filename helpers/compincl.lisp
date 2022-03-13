@@ -3,7 +3,7 @@
 (%include runtime)
 (%include format)
 
-(load "pcomp.lisp")
+; (load "pcomp.lisp")
 
 
 
